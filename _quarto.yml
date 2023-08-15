@@ -1,0 +1,51 @@
+project:
+  type: book
+book:
+  title: "OWASP Machine Learning Security Top 10 (2023)"
+  site-url: "https://mltop10.info"
+  search: true
+  repo-url: "https://github.com/OWASP/www-project-machine-learning-security-top-10"
+  repo-subdir: "2023/"
+  repo-branch: master
+  repo-actions: [edit, issue]
+  downloads: [pdf, epub]
+  reader-mode: true
+  navbar:
+    title: "OWASP Machine Learning Security Top 10 (2023)"
+    logo: OWASP_Logo_Transp.png
+    pinned: true
+  chapters:
+    - index.md
+    - Project_Leaders.md
+    - Contributors.md
+    - part: "Top 10 2023 List"
+      chapters:
+        - ML01_2023-Adversarial_Attack.md
+        - ML02_2023-Data_Poisoning_Attack.md
+        - ML03_2023-Model_Inversion_Attack.md
+        - ML04_2023-Membership_Inference_Attack.md
+        - ML05_2023-Model_Stealing.md
+        - ML06_2023-Corrupted_Packages.md
+        - ML07_2023-Transfer_Learning_Attack.md
+        - ML08_2023-Model_Skewing.md
+        - ML09_2023-Output_Integrity_Attack.md
+        - ML10_2023-Neural_Net_Reprogramming.md
+format:
+  html:
+    theme:
+      light: flatly
+      dark: darkly
+    toc: true
+    toc-title: "Page Contents"
+    anchor-sections: true
+    # embed-resources: true
+    smooth-scroll: true
+    # link-external-icon: true
+    link-external-newwindow: true
+    citations-hover: true
+    footnotes-hover: true
+    comments:
+      giscus:
+        repo: "OWASP/www-project-machine-learning-security-top-10"
+  pdf: default
+  epub: default
