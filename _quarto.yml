@@ -1,5 +1,6 @@
 project:
   type: book
+  output-dir: docs
 book:
   title: "OWASP Machine Learning Security Top 10 (2023)"
   site-url: "https://mltop10.info"
