@@ -2,23 +2,30 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "OWASP Machine Learning Security Top 10 (2023)",
+    "title": "OWASP Machine Learning Security Top 10 (2023 edition)",
     "section": "",
     "text": "Introduction"
   },
   {
-    "objectID": "index.html#project-communication",
-    "href": "index.html#project-communication",
-    "title": "OWASP Machine Learning Security Top 10 (2023)",
-    "section": "Project Communication",
-    "text": "Project Communication\n\nOWASP Slack #project-mlsec-top-10\nGithub Discussions\nMeeting Notes"
+    "objectID": "index.html#overview",
+    "href": "index.html#overview",
+    "title": "OWASP Machine Learning Security Top 10 (2023 edition)",
+    "section": "Overview",
+    "text": "Overview\nThe primary aim of of the OWASP Machine Learning Security Top 10 project is to deliver an overview of the top 10 security issues of machine learning systems. As such, a major goal of this project is to develop a high quality deliverable, reviewed by industry peers."
   },
   {
-    "objectID": "index.html#top-10-machine-learning-security-risks",
-    "href": "index.html#top-10-machine-learning-security-risks",
-    "title": "OWASP Machine Learning Security Top 10 (2023)",
-    "section": "Top 10 Machine Learning Security Risks",
-    "text": "Top 10 Machine Learning Security Risks\n\nML01:2023 Adversarial Attack\nML02:2023 Data Poisoning Attack\nML03:2023 Model Inversion Attack\nML04:2023 Membership Inference Attack\nML05:2023 Model Stealing\nML06:2023 Corrupted Packages\nML07:2023 Transfer Learning Attack\nML08:2023 Model Skewing\nML09:2023 Output Integrity Attack\nML10:2023 Neural Net Reprogramming"
+    "objectID": "index.html#target-audience",
+    "href": "index.html#target-audience",
+    "title": "OWASP Machine Learning Security Top 10 (2023 edition)",
+    "section": "Target Audience",
+    "text": "Target Audience\nThe primary audience for the deliverables in this project are developers, machine learning engineering and operational practitioners, and application security experts. While each of these roles build, operate and secure machine learning systems, the content is not aimed to be exclusively at them. The content will aim to specify where appropriate the level of understanding required for specific technology domains."
+  },
+  {
+    "objectID": "index.html#scope",
+    "href": "index.html#scope",
+    "title": "OWASP Machine Learning Security Top 10 (2023 edition)",
+    "section": "Scope",
+    "text": "Scope\nThis project will provide an overview of the top 10 security issues of machine learning systems. Due to the rapid adoption of machine learning systems, there are related projects within OWASP and other organisations, that may have narrower or broader scope than this project. As an example, while adversarial attacks is a category of threats, this project will also cover non-adversarial scenarios, such as security hygiene of machine learning operational and engineering workflows."
   },
   {
     "objectID": "notice.html#release",
@@ -35,18 +42,18 @@
     "text": "Lead Authors\n\nShain Singh\nSagar Bhure\nRob van der Veer"
   },
   {
-    "objectID": "notice.html#contributors",
-    "href": "notice.html#contributors",
+    "objectID": "notice.html#copyright-and-license",
+    "href": "notice.html#copyright-and-license",
     "title": "Notice",
-    "section": "Contributors",
-    "text": "Contributors\nThanks goes to these wonderful people (emoji key):\n\n\n\n\n\n\n\n\n\nSagar Bhure💻 📖 👀 💬 🖋 🔬 📣\n\n\nShain Singh💻 📖 👀 💬 🖋 📣 📆\n\n\nRob van der Veer👀 💻 📖 💬 📣\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nM S Nishanth💻 💬\n\n\nRick M💻\n\n\nHarold Blankenship💻\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nRiccardoBiosas💻\n\n\nAryan Kenchappagol📖\n\n\nMikołaj Kowalczyk💻 📖 💬 📣"
+    "section": "Copyright and License",
+    "text": "Copyright and License\n\n\n\n\n\nCopyright © 2003-2023 The OWASP Foundation. This document is released under the [Creative Commons Attribution Share-Alike 4.0 license][8]. For any reuse or distribution, you must make it clear to others the license terms of this work."
   },
   {
-    "objectID": "notice.html#how-to-contribute",
-    "href": "notice.html#how-to-contribute",
-    "title": "Notice",
-    "section": "How to contribute",
-    "text": "How to contribute\nThis project follows the all-contributors specification. Contributions of any kind welcome!"
+    "objectID": "about_owasp.html",
+    "href": "about_owasp.html",
+    "title": "About OWASP",
+    "section": "",
+    "text": "The Open Worldwide Application Security Project (OWASP) is an open community dedicated to enabling organizations to develop, purchase, and maintain applications and APIs that can be trusted.\nAt OWASP, you’ll find free and open:\n\nApplication security tools and standards.\nComplete books on application security testing, secure code development, and secure code review.\nPresentations and videos.\nCheat sheets on many common topics.\nStandard security controls and libraries.\nLocal chapters worldwide.\nCutting edge research.\nExtensive conferences worldwide.\nMailing lists (archive).\n\nLearn more at: https://www.owasp.org.\nAll OWASP tools, documents, videos, presentations, and chapters are free and open to anyone interested in improving application security.\nWe advocate approaching application security as a people, process, and technology problem, because the most effective approaches to application security require improvements in these areas.\nOWASP is a new kind of organization. Our freedom from commercial pressures allows us to provide unbiased, practical, and cost-effective information about application security.\nOWASP is not affiliated with any technology company, although we support the informed use of commercial security technology. OWASP produces many types of materials in a collaborative, transparent, and open way.\nThe OWASP Foundation is the non-profit entity that ensures the project’s long-term success. Almost everyone associated with OWASP is a volunteer, including the OWASP board, chapter leaders, project leaders, and project members. We support innovative security research with grants and infrastructure.\nCome join us!"
   },
   {
     "objectID": "ML01_2023-Adversarial_Attack.html#description",
@@ -390,5 +397,264 @@
     "title": "ML10:2023 Neural Net Reprogramming",
     "section": "References",
     "text": "References"
+  },
+  {
+    "objectID": "acknowledgements.html#contributors",
+    "href": "acknowledgements.html#contributors",
+    "title": "Acknowledgements",
+    "section": "Contributors",
+    "text": "Contributors\nThanks goes to these wonderful people (emoji key):\n\n\n\n\n\n\nSagar Bhure💻 📖 👀 💬 🖋 🔬 📣\n\n\nShain Singh💻 📖 👀 💬 🖋 📣 📆\n\n\nRob van der Veer👀 💻 📖 💬 📣\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nM S Nishanth💻 💬\n\n\nRick M💻\n\n\nHarold Blankenship💻\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nRiccardoBiosas💻\n\n\nAryan Kenchappagol📖\n\n\nMikołaj Kowalczyk💻 📖 💬 📣\n\n\n\n\n\n\n\nHow to contribute\nThis project follows the all-contributors specification. Contributions of any kind welcome!"
+  },
+  {
+    "objectID": "glossary.html#zero",
+    "href": "glossary.html#zero",
+    "title": "Glossary",
+    "section": "0",
+    "text": "0"
+  },
+  {
+    "objectID": "glossary.html#one",
+    "href": "glossary.html#one",
+    "title": "Glossary",
+    "section": "1",
+    "text": "1"
+  },
+  {
+    "objectID": "glossary.html#two",
+    "href": "glossary.html#two",
+    "title": "Glossary",
+    "section": "2",
+    "text": "2"
+  },
+  {
+    "objectID": "glossary.html#three",
+    "href": "glossary.html#three",
+    "title": "Glossary",
+    "section": "3",
+    "text": "3"
+  },
+  {
+    "objectID": "glossary.html#four",
+    "href": "glossary.html#four",
+    "title": "Glossary",
+    "section": "4",
+    "text": "4"
+  },
+  {
+    "objectID": "glossary.html#five",
+    "href": "glossary.html#five",
+    "title": "Glossary",
+    "section": "5",
+    "text": "5"
+  },
+  {
+    "objectID": "glossary.html#six",
+    "href": "glossary.html#six",
+    "title": "Glossary",
+    "section": "6",
+    "text": "6"
+  },
+  {
+    "objectID": "glossary.html#seven",
+    "href": "glossary.html#seven",
+    "title": "Glossary",
+    "section": "7",
+    "text": "7"
+  },
+  {
+    "objectID": "glossary.html#eight",
+    "href": "glossary.html#eight",
+    "title": "Glossary",
+    "section": "8",
+    "text": "8"
+  },
+  {
+    "objectID": "glossary.html#nine",
+    "href": "glossary.html#nine",
+    "title": "Glossary",
+    "section": "9",
+    "text": "9"
+  },
+  {
+    "objectID": "glossary.html#a",
+    "href": "glossary.html#a",
+    "title": "Glossary",
+    "section": "A",
+    "text": "A"
+  },
+  {
+    "objectID": "glossary.html#b",
+    "href": "glossary.html#b",
+    "title": "Glossary",
+    "section": "B",
+    "text": "B"
+  },
+  {
+    "objectID": "glossary.html#c",
+    "href": "glossary.html#c",
+    "title": "Glossary",
+    "section": "C",
+    "text": "C"
+  },
+  {
+    "objectID": "glossary.html#d",
+    "href": "glossary.html#d",
+    "title": "Glossary",
+    "section": "D",
+    "text": "D"
+  },
+  {
+    "objectID": "glossary.html#e",
+    "href": "glossary.html#e",
+    "title": "Glossary",
+    "section": "E",
+    "text": "E"
+  },
+  {
+    "objectID": "glossary.html#f",
+    "href": "glossary.html#f",
+    "title": "Glossary",
+    "section": "F",
+    "text": "F"
+  },
+  {
+    "objectID": "glossary.html#g",
+    "href": "glossary.html#g",
+    "title": "Glossary",
+    "section": "G",
+    "text": "G"
+  },
+  {
+    "objectID": "glossary.html#h",
+    "href": "glossary.html#h",
+    "title": "Glossary",
+    "section": "H",
+    "text": "H"
+  },
+  {
+    "objectID": "glossary.html#i",
+    "href": "glossary.html#i",
+    "title": "Glossary",
+    "section": "I",
+    "text": "I"
+  },
+  {
+    "objectID": "glossary.html#j",
+    "href": "glossary.html#j",
+    "title": "Glossary",
+    "section": "J",
+    "text": "J"
+  },
+  {
+    "objectID": "glossary.html#k",
+    "href": "glossary.html#k",
+    "title": "Glossary",
+    "section": "K",
+    "text": "K"
+  },
+  {
+    "objectID": "glossary.html#l",
+    "href": "glossary.html#l",
+    "title": "Glossary",
+    "section": "L",
+    "text": "L"
+  },
+  {
+    "objectID": "glossary.html#m",
+    "href": "glossary.html#m",
+    "title": "Glossary",
+    "section": "M",
+    "text": "M"
+  },
+  {
+    "objectID": "glossary.html#n",
+    "href": "glossary.html#n",
+    "title": "Glossary",
+    "section": "N",
+    "text": "N"
+  },
+  {
+    "objectID": "glossary.html#o",
+    "href": "glossary.html#o",
+    "title": "Glossary",
+    "section": "O",
+    "text": "O"
+  },
+  {
+    "objectID": "glossary.html#p",
+    "href": "glossary.html#p",
+    "title": "Glossary",
+    "section": "P",
+    "text": "P"
+  },
+  {
+    "objectID": "glossary.html#q",
+    "href": "glossary.html#q",
+    "title": "Glossary",
+    "section": "Q",
+    "text": "Q"
+  },
+  {
+    "objectID": "glossary.html#r",
+    "href": "glossary.html#r",
+    "title": "Glossary",
+    "section": "R",
+    "text": "R"
+  },
+  {
+    "objectID": "glossary.html#s",
+    "href": "glossary.html#s",
+    "title": "Glossary",
+    "section": "S",
+    "text": "S"
+  },
+  {
+    "objectID": "glossary.html#t",
+    "href": "glossary.html#t",
+    "title": "Glossary",
+    "section": "T",
+    "text": "T"
+  },
+  {
+    "objectID": "glossary.html#u",
+    "href": "glossary.html#u",
+    "title": "Glossary",
+    "section": "U",
+    "text": "U"
+  },
+  {
+    "objectID": "glossary.html#v",
+    "href": "glossary.html#v",
+    "title": "Glossary",
+    "section": "V",
+    "text": "V"
+  },
+  {
+    "objectID": "glossary.html#w",
+    "href": "glossary.html#w",
+    "title": "Glossary",
+    "section": "W",
+    "text": "W"
+  },
+  {
+    "objectID": "glossary.html#x",
+    "href": "glossary.html#x",
+    "title": "Glossary",
+    "section": "X",
+    "text": "X"
+  },
+  {
+    "objectID": "glossary.html#y",
+    "href": "glossary.html#y",
+    "title": "Glossary",
+    "section": "Y",
+    "text": "Y"
+  },
+  {
+    "objectID": "glossary.html#z",
+    "href": "glossary.html#z",
+    "title": "Glossary",
+    "section": "Z",
+    "text": "Z"
   }
 ]
