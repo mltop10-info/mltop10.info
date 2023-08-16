@@ -31,17 +31,16 @@ ul.task-list li input[type="checkbox"] {
 <meta name="quarto:offset" content="./">
 <link href="./ML07_2023-Transfer_Learning_Attack.html" rel="next">
 <link href="./ML05_2023-Model_Stealing.html" rel="prev">
+<link href="./favicon.png" rel="icon" type="image/png">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -65,6 +64,16 @@ ul.task-list li input[type="checkbox"] {
 <style>html{ scroll-behavior: smooth; }</style>
 
 
+<meta property="og:title" content="OWASP Machine Learning Security Top 10 (2023) - 8&nbsp; ML06:2023 Corrupted Packages">
+<meta property="og:description" content="">
+<meta property="og:site-name" content="OWASP Machine Learning Security Top 10 (2023)">
+<meta name="twitter:title" content="OWASP Machine Learning Security Top 10 (2023) - 8&nbsp; ML06:2023 Corrupted Packages">
+<meta name="twitter:description" content="">
+<meta name="twitter:image" content="https://mltop10.info/cover.png">
+<meta name="twitter:creator" content="@OWASP">
+<meta name="twitter:image-height" content="800">
+<meta name="twitter:image-width" content="512">
+<meta name="twitter:card" content="summary_large_image">
 </head>
 
 <body class="nav-sidebar floating nav-fixed">
@@ -75,7 +84,7 @@ ul.task-list li input[type="checkbox"] {
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container">
     <a href="./index.html" class="navbar-brand navbar-brand-logo">
-    <img src="./OWASP_Logo_Transp.png" alt="" class="navbar-logo">
+    <img src="./favicon.png" alt="" class="navbar-logo">
     </a>
     <a class="navbar-brand" href="./index.html">
     <span class="navbar-title">OWASP Machine Learning Security Top 10 (2023)</span>
@@ -100,7 +109,6 @@ ul.task-list li input[type="checkbox"] {
           </li>
       </ul>
     </div>
-  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
   <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Toggle reader mode">
   <div class="quarto-reader-toggle-btn">
   <i class="bi"></i>
@@ -115,7 +123,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./ML01_2023-Adversarial_Attack.html">Top 10 2023 List</a></li><li class="breadcrumb-item"><a href="./ML06_2023-Corrupted_Packages.html">ML06:2023 Corrupted Packages</a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./ML01_2023-Adversarial_Attack.html">Top 10 2023 List</a></li><li class="breadcrumb-item"><a href="./ML06_2023-Corrupted_Packages.html"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">ML06:2023 Corrupted Packages</span></a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -137,20 +145,12 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Introduction</span></a>
+  <a href="./index.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Introduction</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Project_Leaders.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Leaders</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./Contributors.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Contributors</span></a>
+  <a href="./notice.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Notice</span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
@@ -164,62 +164,52 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./ML01_2023-Adversarial_Attack.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">ML01:2023 Adversarial Attack</span></a>
+  <a href="./ML01_2023-Adversarial_Attack.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">ML01:2023 Adversarial Attack</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./ML02_2023-Data_Poisoning_Attack.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">ML02:2023 Data Poisoning Attack</span></a>
+  <a href="./ML02_2023-Data_Poisoning_Attack.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">ML02:2023 Data Poisoning Attack</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./ML03_2023-Model_Inversion_Attack.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">ML03:2023 Model Inversion Attack</span></a>
+  <a href="./ML03_2023-Model_Inversion_Attack.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">ML03:2023 Model Inversion Attack</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./ML04_2023-Membership_Inference_Attack.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">ML04:2023 Membership Inference Attack</span></a>
+  <a href="./ML04_2023-Membership_Inference_Attack.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">ML04:2023 Membership Inference Attack</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./ML05_2023-Model_Stealing.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">ML05:2023 Model Stealing</span></a>
+  <a href="./ML05_2023-Model_Stealing.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">ML05:2023 Model Stealing</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./ML06_2023-Corrupted_Packages.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">ML06:2023 Corrupted Packages</span></a>
+  <a href="./ML06_2023-Corrupted_Packages.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">ML06:2023 Corrupted Packages</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./ML07_2023-Transfer_Learning_Attack.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">ML07:2023 Transfer Learning Attack</span></a>
+  <a href="./ML07_2023-Transfer_Learning_Attack.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">ML07:2023 Transfer Learning Attack</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./ML08_2023-Model_Skewing.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">ML08:2023 Model Skewing</span></a>
+  <a href="./ML08_2023-Model_Skewing.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">ML08:2023 Model Skewing</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./ML09_2023-Output_Integrity_Attack.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">ML09:2023 Output Integrity Attack</span></a>
+  <a href="./ML09_2023-Output_Integrity_Attack.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">ML09:2023 Output Integrity Attack</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./ML10_2023-Neural_Net_Reprogramming.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">ML10:2023 Neural Net Reprogramming</span></a>
+  <a href="./ML10_2023-Neural_Net_Reprogramming.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">ML10:2023 Neural Net Reprogramming</span></a>
   </div>
 </li>
       </ul>
@@ -230,14 +220,27 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Page Contents</h2>
+   
+  <ul>
+  <li><a href="#description" id="toc-description" class="nav-link active" data-scroll-target="#description">Description</a></li>
+  <li><a href="#how-to-prevent" id="toc-how-to-prevent" class="nav-link" data-scroll-target="#how-to-prevent">How to Prevent</a></li>
+  <li><a href="#risk-factors" id="toc-risk-factors" class="nav-link" data-scroll-target="#risk-factors">Risk Factors</a></li>
+  <li><a href="#example-attack-scenarios" id="toc-example-attack-scenarios" class="nav-link" data-scroll-target="#example-attack-scenarios">Example Attack Scenarios</a>
+  <ul class="collapse">
+  <li><a href="#scenario1" id="toc-scenario1" class="nav-link" data-scroll-target="#scenario1">Scenario #1: Attack on a machine learning project in an organization</a></li>
+  </ul></li>
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
+  </ul>
+<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/OWASP/www-project-machine-learning-security-top-10/edit/master/2023/ML06_2023-Corrupted_Packages.md" class="toc-action">Edit this page</a></p><p><a href="https://github.com/OWASP/www-project-machine-learning-security-top-10/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">ML06:2023 Corrupted Packages</h1>
+<h1 class="title"><span class="chapter-title">ML06:2023 Corrupted Packages</span></h1>
 </div>
 
 
@@ -252,51 +255,64 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
+<section id="description" class="level2">
+<h2 class="anchored" data-anchor-id="description">Description</h2>
+<p>Corrupted packages attacks occur when an attacker modifies or replaces a machine learning library or model that is used by a system.</p>
+</section>
+<section id="how-to-prevent" class="level2">
+<h2 class="anchored" data-anchor-id="how-to-prevent">How to Prevent</h2>
+<p><strong>Verify Package Signatures:</strong> Before installing any packages, verify the digital signatures of the packages to ensure that they have not been tampered with.</p>
+<p><strong>Use Secure Package Repositories:</strong> Use secure package repositories, such as Anaconda, that enforce strict security measures and have a vetting process for packages.</p>
+<p><strong>Keep Packages Up-to-date:</strong> Regularly update all packages to ensure that any vulnerabilities are patched.</p>
+<p><strong>Use Virtual Environments:</strong> Use virtual environments to isolate packages and libraries from the rest of the system. This makes it easier to detect any malicious packages and remove them.</p>
+<p><strong>Perform Code Reviews:</strong> Regularly perform code reviews on all packages and libraries used in a project to detect any malicious code.</p>
+<p><strong>Use Package Verification Tools:</strong> Use tools such as PEP 476 and Secure Package Install to verify the authenticity and integrity of packages before installation.</p>
+<p><strong>Educate Developers:</strong> Educate developers on the risks associated with Corrupted Packages Attacks and the importance of verifying packages before installation.</p>
+</section>
+<section id="risk-factors" class="level2">
+<h2 class="anchored" data-anchor-id="risk-factors">Risk Factors</h2>
 <table class="table">
 <colgroup>
-<col style="width: 46%">
-<col style="width: 24%">
-<col style="width: 28%">
+<col style="width: 52%">
+<col style="width: 15%">
+<col style="width: 32%">
 </colgroup>
 <thead>
 <tr class="header">
-<th style="text-align: center;">Threat agents/Attack vectors</th>
+<th style="text-align: center;">Threat Agents/Attack Vectors</th>
 <th style="text-align: center;">Security Weakness</th>
 <th style="text-align: center;">Impact</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: center;">Exploitability: 5 (Effort required to exploit this weakness is moderate)<br>ML Application Specific: 5 <br>ML Operations Specific: 3</td>
-<td style="text-align: center;">Detectability: 2<br>(Detection of this attack is not much challenging)</td>
-<td style="text-align: center;">Technical: 4 <br>(Moderate technical skill required)<br></td>
+<td style="text-align: center;">Exploitability: 5 (Easy) <br><br> <em>ML Application Specific: 5</em> <br> <em>ML Operations Specific: 3</em></td>
+<td style="text-align: center;">Detectability: 5 (Easy)</td>
+<td style="text-align: center;">Technical: 4 (Moderate)</td>
 </tr>
 <tr class="even">
-<td style="text-align: center;">Malicious attacker<br>Modifying code of open-source package used by the machine learning project</td>
-<td style="text-align: center;">Relying on untrusted third-party code</td>
-<td style="text-align: center;">Compromise of the machine learning project and potential harm to the organization</td>
+<td style="text-align: center;">Threat Actor: Malicious attacker. <br><br> Attack Vector: Modifying code of open-source package used by the machine learning project.</td>
+<td style="text-align: center;">Relying on untrusted third-party code.</td>
+<td style="text-align: center;">Compromise of the machine learning project and potential harm to the organization.</td>
 </tr>
 </tbody>
 </table>
-<p>It is important to note that this chart is only a sample based on scenario below, and the actual risk assessment will depend on the specific circumstances of each machine learning system.</p>
-<p><strong>Description:</strong></p>
-<p>Corrupted packages attacks occur when an attacker modifies or replaces a machine learning library or model that is used by a system.</p>
-<p><strong>Example Attack Scenario:</strong></p>
-<p>Scenario 1: Attack on a machine learning project in an organization</p>
+<p>It is important to note that this chart is only a sample based on <a href="#scenario1">the scenario below</a> only. The actual risk assessment will depend on the specific circumstances of each machine learning system.</p>
+</section>
+<section id="example-attack-scenarios" class="level2">
+<h2 class="anchored" data-anchor-id="example-attack-scenarios">Example Attack Scenarios</h2>
+<section id="scenario1" class="level3">
+<h3 class="anchored" data-anchor-id="scenario1">Scenario #1: Attack on a machine learning project in an organization</h3>
 <p>A malicious attacker wants to compromise a machine learning project being developed by a large organization. The attacker knows that the project relies on several open-source packages and libraries and wants to find a way to compromise the project.</p>
-<p>The attacker executed the attack by modifying the code of one of the packages that the project relies on, such as NumPy or Scikit-learn. The attacker then uploads this modified version of the package to a public repository, such as PyPI, making it available for others to download and use. When the victim organization downloads and installs the package, the attacker's malicious code is also installed and can be used to compromise the project.</p>
-<p>This type of attack can be particularly dangerous as it can go unnoticed for a long time, since the victim may not realize that the package they are using has been compromised. The attacker's malicious code could be used to steal sensitive information, modify results, or even cause the machine learning model to fa</p>
-<p><strong>How to Prevent:</strong></p>
-<p>Verify Package Signatures: Before installing any packages, verify the digital signatures of the packages to ensure that they have not been tampered with.</p>
-<p>Use Secure Package Repositories: Use secure package repositories, such as Anaconda, that enforce strict security measures and have a vetting process for packages.</p>
-<p>Keep Packages Up-to-date: Regularly update all packages to ensure that any vulnerabilities are patched.</p>
-<p>Use Virtual Environments: Use virtual environments to isolate packages and libraries from the rest of the system. This makes it easier to detect any malicious packages and remove them.</p>
-<p>Perform Code Reviews: Regularly perform code reviews on all packages and libraries used in a project to detect any malicious code.</p>
-<p>Use Package Verification Tools: Use tools such as PEP 476 and Secure Package Install to verify the authenticity and integrity of packages before installation.</p>
-<p>Educate Developers: Educate developers on the risks associated with Corrupted Packages Attacks and the importance of verifying packages before installation.</p>
-<p><strong>References:</strong></p>
+<p>The attacker executed the attack by modifying the code of one of the packages that the project relies on, such as NumPy or Scikit-learn. The attacker then uploads this modified version of the package to a public repository, such as PyPI, making it available for others to download and use. When the victim organization downloads and installs the package, the attacker’s malicious code is also installed and can be used to compromise the project.</p>
+<p>This type of attack can be particularly dangerous as it can go unnoticed for a long time, since the victim may not realize that the package they are using has been compromised. The attacker’s malicious code could be used to steal sensitive information, modify results, or even cause the machine learning model to fail.</p>
+</section>
+</section>
+<section id="references" class="level2">
+<h2 class="anchored" data-anchor-id="references">References</h2>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -319,121 +335,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
   toggleBodyColorPrimary();  
-  const disableStylesheet = (stylesheets) => {
-    for (let i=0; i < stylesheets.length; i++) {
-      const stylesheet = stylesheets[i];
-      stylesheet.rel = 'prefetch';
-    }
-  }
-  const enableStylesheet = (stylesheets) => {
-    for (let i=0; i < stylesheets.length; i++) {
-      const stylesheet = stylesheets[i];
-      stylesheet.rel = 'stylesheet';
-    }
-  }
-  const manageTransitions = (selector, allowTransitions) => {
-    const els = window.document.querySelectorAll(selector);
-    for (let i=0; i < els.length; i++) {
-      const el = els[i];
-      if (allowTransitions) {
-        el.classList.remove('notransition');
-      } else {
-        el.classList.add('notransition');
-      }
-    }
-  }
-  const toggleColorMode = (alternate) => {
-    // Switch the stylesheets
-    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
-    manageTransitions('#quarto-margin-sidebar .nav-link', false);
-    if (alternate) {
-      enableStylesheet(alternateStylesheets);
-      for (const sheetNode of alternateStylesheets) {
-        if (sheetNode.id === "quarto-bootstrap") {
-          toggleBodyColorMode(sheetNode);
-        }
-      }
-    } else {
-      disableStylesheet(alternateStylesheets);
-      toggleBodyColorPrimary();
-    }
-    manageTransitions('#quarto-margin-sidebar .nav-link', true);
-    // Switch the toggles
-    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
-    for (let i=0; i < toggles.length; i++) {
-      const toggle = toggles[i];
-      if (toggle) {
-        if (alternate) {
-          toggle.classList.add("alternate");     
-        } else {
-          toggle.classList.remove("alternate");
-        }
-      }
-    }
-    // Hack to workaround the fact that safari doesn't
-    // properly recolor the scrollbar when toggling (#1455)
-    if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
-      manageTransitions("body", false);
-      window.scrollTo(0, 1);
-      setTimeout(() => {
-        window.scrollTo(0, 0);
-        manageTransitions("body", true);
-      }, 40);  
-    }
-  }
-  const isFileUrl = () => { 
-    return window.location.protocol === 'file:';
-  }
-  const hasAlternateSentinel = () => {  
-    let styleSentinel = getColorSchemeSentinel();
-    if (styleSentinel !== null) {
-      return styleSentinel === "alternate";
-    } else {
-      return false;
-    }
-  }
-  const setStyleSentinel = (alternate) => {
-    const value = alternate ? "alternate" : "default";
-    if (!isFileUrl()) {
-      window.localStorage.setItem("quarto-color-scheme", value);
-    } else {
-      localAlternateSentinel = value;
-    }
-  }
-  const getColorSchemeSentinel = () => {
-    if (!isFileUrl()) {
-      const storageValue = window.localStorage.getItem("quarto-color-scheme");
-      return storageValue != null ? storageValue : localAlternateSentinel;
-    } else {
-      return localAlternateSentinel;
-    }
-  }
-  let localAlternateSentinel = 'default';
-  // Dark / light mode switch
-  window.quartoToggleColorScheme = () => {
-    // Read the current dark / light value 
-    let toAlternate = !hasAlternateSentinel();
-    toggleColorMode(toAlternate);
-    setStyleSentinel(toAlternate);
-  };
-  // Ensure there is a toggle, if there isn't float one in the top right
-  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
-    const a = window.document.createElement('a');
-    a.classList.add('top-right');
-    a.classList.add('quarto-color-scheme-toggle');
-    a.href = "";
-    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
-    const i = window.document.createElement("i");
-    i.classList.add('bi');
-    a.appendChild(i);
-    window.document.body.appendChild(a);
-  }
-  // Switch to dark mode if need be
-  if (hasAlternateSentinel()) {
-    toggleColorMode(true);
-  } else {
-    toggleColorMode(false);
-  }
   const icon = "";
   const anchorJS = new window.AnchorJS();
   anchorJS.options = {
@@ -666,12 +567,12 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
       <a href="./ML05_2023-Model_Stealing.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">ML05:2023 Model Stealing</span>
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">ML05:2023 Model Stealing</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
       <a href="./ML07_2023-Transfer_Learning_Attack.html" class="pagination-link">
-        <span class="nav-page-text">ML07:2023 Transfer Learning Attack</span> <i class="bi bi-arrow-right-short"></i>
+        <span class="nav-page-text"><span class="chapter-title">ML07:2023 Transfer Learning Attack</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
@@ -679,5 +580,5 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 
 
 
-<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/OWASP/www-project-machine-learning-security-top-10/edit/master/2023/ML06_2023-Corrupted_Packages.md" class="toc-action">Edit this page</a></p><p><a href="https://github.com/OWASP/www-project-machine-learning-security-top-10/issues/new" class="toc-action">Report an issue</a></p></div></div></div></div></footer><script src="site_libs/quarto-html/zenscroll-min.js"></script>
+<script src="site_libs/quarto-html/zenscroll-min.js"></script>
 </body></html>

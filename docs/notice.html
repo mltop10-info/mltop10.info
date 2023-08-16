@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>OWASP Machine Learning Security Top 10 (2023) - ML05:2023 Model Stealing</title>
+<title>OWASP Machine Learning Security Top 10 (2023) - Notice</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,25 +23,24 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../">
-<link href="../2023/ML06_2023-Corrupted_Packages.html" rel="next">
-<link href="../2023/ML04_2023-Membership_Inference_Attack.html" rel="prev">
-<script src="../site_libs/quarto-html/quarto.js"></script>
-<script src="../site_libs/quarto-html/popper.min.js"></script>
-<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./ML01_2023-Adversarial_Attack.html" rel="next">
+<link href="./index.html" rel="prev">
+<link href="./favicon.png" rel="icon" type="image/png">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -62,11 +61,20 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<style>html{ scroll-behavior: smooth; }</style>
 
 
-<meta name="twitter:title" content="OWASP Machine Learning Security Top 10 (2023) - ML05:2023 Model Stealing">
+<meta property="og:title" content="OWASP Machine Learning Security Top 10 (2023) - 2&nbsp; Notice">
+<meta property="og:description" content="">
+<meta property="og:image" content="https://avatars.githubusercontent.com/u/25385987?v=4?s=100">
+<meta property="og:site-name" content="OWASP Machine Learning Security Top 10 (2023)">
+<meta name="twitter:title" content="OWASP Machine Learning Security Top 10 (2023) - 2&nbsp; Notice">
 <meta name="twitter:description" content="">
-<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://mltop10.info/cover.png">
+<meta name="twitter:creator" content="@OWASP">
+<meta name="twitter:image-height" content="800">
+<meta name="twitter:image-width" content="512">
+<meta name="twitter:card" content="summary_large_image">
 </head>
 
 <body class="nav-sidebar floating nav-fixed">
@@ -76,33 +84,32 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg navbar-dark ">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container">
-    <a href="../index.html" class="navbar-brand navbar-brand-logo">
-    <img src="../OWASP_Logo_Transp.png" alt="" class="navbar-logo">
+    <a href="./index.html" class="navbar-brand navbar-brand-logo">
+    <img src="./favicon.png" alt="" class="navbar-logo">
     </a>
-    <a class="navbar-brand" href="../index.html">
+    <a class="navbar-brand" href="./index.html">
     <span class="navbar-title">OWASP Machine Learning Security Top 10 (2023)</span>
     </a>
   </div>
         <div class="quarto-navbar-tools ms-auto tools-wide">
-    <a href="https://github.com/OWASP/www-project-machine-learning-security-top-10.git/tree/master/2023/" rel="" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
+    <a href="https://github.com/OWASP/www-project-machine-learning-security-top-10/tree/master/2023/" rel="" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
     <div class="dropdown">
       <a href="" title="Download" id="quarto-navigation-tool-dropdown-0" class="quarto-navigation-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download"><i class="bi bi-download"></i></a>
       <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="quarto-navigation-tool-dropdown-0">
           <li>
-            <a class="dropdown-item quarto-navbar-tools ms-auto-item" href="../OWASP-Machine-Learning-Security-Top-10--2023-.pdf">
+            <a class="dropdown-item quarto-navbar-tools ms-auto-item" href="./OWASP-Machine-Learning-Security-Top-10--2023-.pdf">
               <i class="bi bi-bi-file-pdf pe-1"></i>
             Download PDF
             </a>
           </li>
           <li>
-            <a class="dropdown-item quarto-navbar-tools ms-auto-item" href="../OWASP-Machine-Learning-Security-Top-10--2023-.epub">
+            <a class="dropdown-item quarto-navbar-tools ms-auto-item" href="./OWASP-Machine-Learning-Security-Top-10--2023-.epub">
               <i class="bi bi-bi-journal pe-1"></i>
             Download ePub
             </a>
           </li>
       </ul>
     </div>
-  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
   <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Toggle reader mode">
   <div class="quarto-reader-toggle-btn">
   <i class="bi"></i>
@@ -117,7 +124,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../2023/ML01_2023-Adversarial_Attack.html">Top 10 2023 List</a></li><li class="breadcrumb-item"><a href="../2023/ML05_2023-Model_Stealing.html">ML05:2023 Model Stealing</a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./notice.html"><span class="chapter-title">Notice</span></a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -139,20 +146,12 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Introduction</span></a>
+  <a href="./index.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Introduction</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../Project_Leaders.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Leaders</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../Contributors.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Contributors</span></a>
+  <a href="./notice.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Notice</span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
@@ -166,62 +165,52 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../2023/ML01_2023-Adversarial_Attack.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">ML01:2023 Adversarial Attack</span></a>
+  <a href="./ML01_2023-Adversarial_Attack.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">ML01:2023 Adversarial Attack</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../2023/ML02_2023-Data_Poisoning_Attack.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">ML02:2023 Data Poisoning Attack</span></a>
+  <a href="./ML02_2023-Data_Poisoning_Attack.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">ML02:2023 Data Poisoning Attack</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../2023/ML03_2023-Model_Inversion_Attack.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">ML03:2023 Model Inversion Attack</span></a>
+  <a href="./ML03_2023-Model_Inversion_Attack.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">ML03:2023 Model Inversion Attack</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../2023/ML04_2023-Membership_Inference_Attack.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">ML04:2023 Membership Inference Attack</span></a>
+  <a href="./ML04_2023-Membership_Inference_Attack.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">ML04:2023 Membership Inference Attack</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../2023/ML05_2023-Model_Stealing.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">ML05:2023 Model Stealing</span></a>
+  <a href="./ML05_2023-Model_Stealing.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">ML05:2023 Model Stealing</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../2023/ML06_2023-Corrupted_Packages.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">ML06:2023 Corrupted Packages</span></a>
+  <a href="./ML06_2023-Corrupted_Packages.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">ML06:2023 Corrupted Packages</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../2023/ML07_2023-Transfer_Learning_Attack.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">ML07:2023 Transfer Learning Attack</span></a>
+  <a href="./ML07_2023-Transfer_Learning_Attack.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">ML07:2023 Transfer Learning Attack</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../2023/ML08_2023-Model_Skewing.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">ML08:2023 Model Skewing</span></a>
+  <a href="./ML08_2023-Model_Skewing.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">ML08:2023 Model Skewing</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../2023/ML09_2023-Output_Integrity_Attack.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">ML09:2023 Output Integrity Attack</span></a>
+  <a href="./ML09_2023-Output_Integrity_Attack.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">ML09:2023 Output Integrity Attack</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../2023/ML10_2023-Neural_Net_Reprogramming.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">ML10:2023 Neural Net Reprogramming</span></a>
+  <a href="./ML10_2023-Neural_Net_Reprogramming.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">ML10:2023 Neural Net Reprogramming</span></a>
   </div>
 </li>
       </ul>
@@ -232,14 +221,23 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Page Contents</h2>
+   
+  <ul>
+  <li><a href="#release" id="toc-release" class="nav-link active" data-scroll-target="#release">Release</a></li>
+  <li><a href="#lead-authors" id="toc-lead-authors" class="nav-link" data-scroll-target="#lead-authors">Lead Authors</a></li>
+  <li><a href="#contributors" id="toc-contributors" class="nav-link" data-scroll-target="#contributors">Contributors</a></li>
+  <li><a href="#how-to-contribute" id="toc-how-to-contribute" class="nav-link" data-scroll-target="#how-to-contribute">How to contribute</a></li>
+  </ul>
+<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/OWASP/www-project-machine-learning-security-top-10/edit/master/2023/notice.md" class="toc-action">Edit this page</a></p><p><a href="https://github.com/OWASP/www-project-machine-learning-security-top-10/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">ML05:2023 Model Stealing</h1>
+<h1 class="title"><span class="chapter-title">Notice</span></h1>
 </div>
 
 
@@ -254,50 +252,114 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<table class="table">
-<colgroup>
-<col style="width: 32%">
-<col style="width: 26%">
-<col style="width: 40%">
-</colgroup>
-<thead>
-<tr class="header">
-<th style="text-align: center;">Threat agents/Attack vectors</th>
-<th style="text-align: center;">Security Weakness</th>
-<th style="text-align: center;">Impact</th>
-</tr>
-</thead>
+<section id="release" class="level2">
+<h2 class="anchored" data-anchor-id="release">Release</h2>
+<p>This document is currently at v0.2 draft release.</p>
+</section>
+<section id="lead-authors" class="level2">
+<h2 class="anchored" data-anchor-id="lead-authors">Lead Authors</h2>
+<ul>
+<li><a href="mailto:shain.singh@owasp.org">Shain Singh</a></li>
+<li><a href="mailto:sagar.bhure@owasp.org">Sagar Bhure</a></li>
+<li><a href="mailto:rob.vanderveer@owasp.org">Rob van der Veer</a></li>
+</ul>
+</section>
+<section id="contributors" class="level2">
+<h2 class="anchored" data-anchor-id="contributors">Contributors</h2>
+<p>Thanks goes to these wonderful people (<a href="https://allcontributors.org/docs/en/emoji-key">emoji key</a>):</p>
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
+
+<blockquote class="blockquote">
+</blockquote><table>
 <tbody>
-<tr class="odd">
-<td style="text-align: center;">Exploitability: 4 (Effort required to exploit this weakness is moderate)<br>ML Application Specific: 4<br>ML Operations Specific: 3</td>
-<td style="text-align: center;">Detectability: 3 <br>(Detection of this attack is moderately challenging)</td>
-<td style="text-align: center;">Technical: 4 <br>(Moderate technical skill required)<br></td>
+<tr>
+<td align="center" valign="top" width="11.11%">
+<a href="https://github.com/sagarbhure"><img src="https://avatars.githubusercontent.com/u/25385987?v=4?s=100" width="100px;" alt="Sagar Bhure"><br><sub><b>Sagar Bhure</b></sub></a><br><a href="https://github.com/OWASP/www-project-machine-learning-security-top-10/commits?author=sagarbhure" title="Code">💻</a> <a href="https://github.com/OWASP/www-project-machine-learning-security-top-10/commits?author=sagarbhure" title="Documentation">📖</a> <a href="https://github.com/OWASP/www-project-machine-learning-security-top-10/pulls?q=is%3Apr+reviewed-by%3Asagarbhure" title="Reviewed Pull Requests">👀</a> <a href="#question-sagarbhure" title="Answering Questions">💬</a> <a href="#content-sagarbhure" title="Content">🖋</a> <a href="#research-sagarbhure" title="Research">🔬</a> <a href="#promotion-sagarbhure" title="Promotion">📣</a>
+</td>
+<td align="center" valign="top" width="11.11%">
+<a href="https://shain.io/"><img src="https://avatars.githubusercontent.com/u/412800?v=4?s=100" width="100px;" alt="Shain Singh"><br><sub><b>Shain Singh</b></sub></a><br><a href="https://github.com/OWASP/www-project-machine-learning-security-top-10/commits?author=shsingh" title="Code">💻</a> <a href="https://github.com/OWASP/www-project-machine-learning-security-top-10/commits?author=shsingh" title="Documentation">📖</a> <a href="https://github.com/OWASP/www-project-machine-learning-security-top-10/pulls?q=is%3Apr+reviewed-by%3Ashsingh" title="Reviewed Pull Requests">👀</a> <a href="#question-shsingh" title="Answering Questions">💬</a> <a href="#content-shsingh" title="Content">🖋</a> <a href="#promotion-shsingh" title="Promotion">📣</a> <a href="#projectManagement-shsingh" title="Project Management">📆</a>
+</td>
+<td align="center" valign="top" width="11.11%">
+<a href="https://github.com/robvanderveer"><img src="https://avatars.githubusercontent.com/u/796794?v=4?s=100" width="100px;" alt="Rob van der Veer"><br><sub><b>Rob van der Veer</b></sub></a><br><a href="https://github.com/OWASP/www-project-machine-learning-security-top-10/pulls?q=is%3Apr+reviewed-by%3Arobvanderveer" title="Reviewed Pull Requests">👀</a> <a href="https://github.com/OWASP/www-project-machine-learning-security-top-10/commits?author=robvanderveer" title="Code">💻</a> <a href="https://github.com/OWASP/www-project-machine-learning-security-top-10/commits?author=robvanderveer" title="Documentation">📖</a> <a href="#question-robvanderveer" title="Answering Questions">💬</a> <a href="#promotion-robvanderveer" title="Promotion">📣</a>
+</td>
 </tr>
-<tr class="even">
-<td style="text-align: center;">Agent/Attack Vector: This refers to the entity that carries out the attack, in this case, it is an attacker who wants to steal the machine learning model.</td>
-<td style="text-align: center;">Unsecured model deployment: The unsecured deployment of the model makes it easier for the attacker to access and steal the model.</td>
-<td style="text-align: center;">The impact of a model theft could be both on the confidentiality of the data used to train the model and the reputation of the organization that developed the model.<br>Confidentiality, Reputation</td>
+<tr class="blank_row">
+<td colspan="5">
+</td>
+</tr>
+<tr class="blank_row">
+<td colspan="5">
+</td>
+</tr>
+<tr class="blank_row">
+<td colspan="5">
+</td>
+</tr>
+<tr class="blank_row">
+<td colspan="5">
+</td>
+</tr>
+<tr class="blank_row">
+<td colspan="5">
+</td>
+</tr>
+<tr>
+<td align="center" valign="top" width="11.11%">
+<a href="https://github.com/msnishanth9001"><img src="https://avatars.githubusercontent.com/u/49409979?v=4?s=100" width="100px;" alt="M S Nishanth"><br><sub><b>M S Nishanth</b></sub></a><br><a href="https://github.com/OWASP/www-project-machine-learning-security-top-10/commits?author=msnishanth9001" title="Code">💻</a> <a href="#question-msnishanth9001" title="Answering Questions">💬</a>
+</td>
+<td align="center" valign="top" width="11.11%">
+<a href="https://github.com/kingthorin"><img src="https://avatars.githubusercontent.com/u/7570458?v=4?s=100" width="100px;" alt="Rick M"><br><sub><b>Rick M</b></sub></a><br><a href="https://github.com/OWASP/www-project-machine-learning-security-top-10/commits?author=kingthorin" title="Code">💻</a>
+</td>
+<td align="center" valign="top" width="11.11%">
+<a href="https://owasp.org/"><img src="https://avatars.githubusercontent.com/u/36673698?v=4?s=100" width="100px;" alt="Harold Blankenship"><br><sub><b>Harold Blankenship</b></sub></a><br><a href="https://github.com/OWASP/www-project-machine-learning-security-top-10/commits?author=hblankenship" title="Code">💻</a>
+</td>
+</tr><tr class="blank_row">
+<td colspan="5">
+</td>
+</tr>
+<tr class="blank_row">
+<td colspan="5">
+</td>
+</tr>
+<tr class="blank_row">
+<td colspan="5">
+</td>
+</tr>
+<tr class="blank_row">
+<td colspan="5">
+</td>
+</tr>
+<tr class="blank_row">
+<td colspan="5">
+</td>
+</tr>
+<tr>
+<td align="center" valign="top" width="11.11%">
+<a href="https://github.com/RiccardoBiosas"><img src="https://avatars.githubusercontent.com/u/65150720?v=4?s=100" width="100px;" alt="RiccardoBiosas"><br><sub><b>RiccardoBiosas</b></sub></a><br><a href="https://github.com/OWASP/www-project-machine-learning-security-top-10/commits?author=RiccardoBiosas" title="Code">💻</a>
+</td>
+<td align="center" valign="top" width="11.11%">
+<a href="https://github.com/aryanxk02"><img src="https://avatars.githubusercontent.com/u/59761275?v=4?s=100" width="100px;" alt="Aryan Kenchappagol"><br><sub><b>Aryan Kenchappagol</b></sub></a><br><a href="https://github.com/OWASP/www-project-machine-learning-security-top-10/commits?author=aryanxk02" title="Documentation">📖</a>
+</td>
+<td align="center" valign="top" width="11.11%">
+<a href="https://github.com/mik0w"><img src="https://avatars.githubusercontent.com/u/64902909?v=4?s=100" width="100px;" alt="Mikołaj Kowalczyk"><br><sub><b>Mikołaj Kowalczyk</b></sub></a><br><a href="https://github.com/OWASP/www-project-machine-learning-security-top-10/commits?author=mik0w" title="Code">💻</a> <a href="https://github.com/OWASP/www-project-machine-learning-security-top-10/commits?author=mik0w" title="Documentation">📖</a> <a href="#question-mik0w" title="Answering Questions">💬</a> <a href="#promotion-mik0w" title="Promotion">📣</a>
+</td>
 </tr>
 </tbody>
+
 </table>
-<p>It is important to note that this chart is only a sample based on scenario below, and the actual risk assessment will depend on the specific circumstances of each machine learning system.</p>
-<p><strong>Description:</strong></p>
-<p>Model stealing attacks occur when an attacker gains access to the model’s parameters.</p>
-<p><strong>Example Attack Scenario:</strong></p>
-<p>Scenario: Stealing a machine learning model from a competitor</p>
-<p>A malicious attacker is working for a competitor of a company that has developed a valuable machine learning model. The attacker wants to steal this model so that their company can gain a competitive advantage and start using it for their own purposes.</p>
-<p>The attacker executed this attack by reverse engineering the company’s machine learning model, either by disassembling the binary code or by accessing the model’s training data and algorithm. Once the attacker has reverse engineered the model, they can use this information to recreate the model and start using it for their own purposes. This can result in significant financial loss for the original company, as well as damage to their reputation.</p>
-<p><strong>How to Prevent:</strong></p>
-<p>Encryption: Encrypting the model’s code, training data, and other sensitive information can prevent attackers from being able to access and steal the model.</p>
-<p>Access Control: Implementing strict access control measures, such as two-factor authentication, can prevent unauthorized individuals from accessing and stealing the model.</p>
-<p>Regular backups: Regularly backing up the model’s code, training data, and other sensitive information can ensure that it can be recovered in the event of a theft.</p>
-<p>Model Obfuscation: Obfuscating the model’s code and making it difficult to reverse engineer can prevent attackers from being able to steal the model.</p>
-<p>Watermarking: Adding a watermark to the model’s code and training data can make it possible to trace the source of a theft and hold the attacker accountable.</p>
-<p>Legal protection: Securing legal protection for the model, such as patents or trade secrets, can make it more difficult for an attacker to steal the model and can provide a basis for legal action in the event of a theft.</p>
-<p>Monitoring and auditing: Regularly monitoring and auditing the model’s use can help detect and prevent theft by detecting when an attacker is attempting to access or steal the model.</p>
-<p><strong>References:</strong></p>
+
+<!-- markdownlint-restore -->
+<!-- prettier-ignore-end -->
+<!-- ALL-CONTRIBUTORS-LIST:END -->
+</section>
+<section id="how-to-contribute" class="level2">
+<h2 class="anchored" data-anchor-id="how-to-contribute">How to contribute</h2>
+<p>This project follows the <a href="https://github.com/all-contributors/all-contributors">all-contributors</a> specification. Contributions of any kind welcome!</p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -320,121 +382,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
   toggleBodyColorPrimary();  
-  const disableStylesheet = (stylesheets) => {
-    for (let i=0; i < stylesheets.length; i++) {
-      const stylesheet = stylesheets[i];
-      stylesheet.rel = 'prefetch';
-    }
-  }
-  const enableStylesheet = (stylesheets) => {
-    for (let i=0; i < stylesheets.length; i++) {
-      const stylesheet = stylesheets[i];
-      stylesheet.rel = 'stylesheet';
-    }
-  }
-  const manageTransitions = (selector, allowTransitions) => {
-    const els = window.document.querySelectorAll(selector);
-    for (let i=0; i < els.length; i++) {
-      const el = els[i];
-      if (allowTransitions) {
-        el.classList.remove('notransition');
-      } else {
-        el.classList.add('notransition');
-      }
-    }
-  }
-  const toggleColorMode = (alternate) => {
-    // Switch the stylesheets
-    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
-    manageTransitions('#quarto-margin-sidebar .nav-link', false);
-    if (alternate) {
-      enableStylesheet(alternateStylesheets);
-      for (const sheetNode of alternateStylesheets) {
-        if (sheetNode.id === "quarto-bootstrap") {
-          toggleBodyColorMode(sheetNode);
-        }
-      }
-    } else {
-      disableStylesheet(alternateStylesheets);
-      toggleBodyColorPrimary();
-    }
-    manageTransitions('#quarto-margin-sidebar .nav-link', true);
-    // Switch the toggles
-    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
-    for (let i=0; i < toggles.length; i++) {
-      const toggle = toggles[i];
-      if (toggle) {
-        if (alternate) {
-          toggle.classList.add("alternate");     
-        } else {
-          toggle.classList.remove("alternate");
-        }
-      }
-    }
-    // Hack to workaround the fact that safari doesn't
-    // properly recolor the scrollbar when toggling (#1455)
-    if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
-      manageTransitions("body", false);
-      window.scrollTo(0, 1);
-      setTimeout(() => {
-        window.scrollTo(0, 0);
-        manageTransitions("body", true);
-      }, 40);  
-    }
-  }
-  const isFileUrl = () => { 
-    return window.location.protocol === 'file:';
-  }
-  const hasAlternateSentinel = () => {  
-    let styleSentinel = getColorSchemeSentinel();
-    if (styleSentinel !== null) {
-      return styleSentinel === "alternate";
-    } else {
-      return false;
-    }
-  }
-  const setStyleSentinel = (alternate) => {
-    const value = alternate ? "alternate" : "default";
-    if (!isFileUrl()) {
-      window.localStorage.setItem("quarto-color-scheme", value);
-    } else {
-      localAlternateSentinel = value;
-    }
-  }
-  const getColorSchemeSentinel = () => {
-    if (!isFileUrl()) {
-      const storageValue = window.localStorage.getItem("quarto-color-scheme");
-      return storageValue != null ? storageValue : localAlternateSentinel;
-    } else {
-      return localAlternateSentinel;
-    }
-  }
-  let localAlternateSentinel = 'default';
-  // Dark / light mode switch
-  window.quartoToggleColorScheme = () => {
-    // Read the current dark / light value 
-    let toAlternate = !hasAlternateSentinel();
-    toggleColorMode(toAlternate);
-    setStyleSentinel(toAlternate);
-  };
-  // Ensure there is a toggle, if there isn't float one in the top right
-  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
-    const a = window.document.createElement('a');
-    a.classList.add('top-right');
-    a.classList.add('quarto-color-scheme-toggle');
-    a.href = "";
-    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
-    const i = window.document.createElement("i");
-    i.classList.add('bi');
-    a.appendChild(i);
-    window.document.body.appendChild(a);
-  }
-  // Switch to dark mode if need be
-  if (hasAlternateSentinel()) {
-    toggleColorMode(true);
-  } else {
-    toggleColorMode(false);
-  }
   const icon = "";
   const anchorJS = new window.AnchorJS();
   anchorJS.options = {
@@ -646,17 +593,33 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       });
     }
   }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var filterRegex = new RegExp("https:\/\/mltop10\.info");
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+          // target, if specified
+          link.setAttribute("target", "_blank");
+      }
+    }
 });
+</script>
+<script src="https://giscus.app/client.js" data-repo="OWASP/www-project-machine-learning-security-top-10" data-repo-id="MDEwOlJlcG9zaXRvcnkyMDgxMzgxNTc=" data-category="General" data-category-id="DIC_kwDODGfvrc4CVbeJ" data-mapping="title" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="top" data-theme="light" data-lang="en" crossorigin="anonymous" async="">
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../2023/ML04_2023-Membership_Inference_Attack.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">ML04:2023 Membership Inference Attack</span>
+      <a href="./index.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">Introduction</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../2023/ML06_2023-Corrupted_Packages.html" class="pagination-link">
-        <span class="nav-page-text">ML06:2023 Corrupted Packages</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./ML01_2023-Adversarial_Attack.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-title">ML01:2023 Adversarial Attack</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
@@ -664,4 +627,5 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 
 
 
-<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/OWASP/www-project-machine-learning-security-top-10.git/edit/master/2023/2023/ML05_2023-Model_Stealing.md" class="toc-action">Edit this page</a></p><p><a href="https://github.com/OWASP/www-project-machine-learning-security-top-10.git/issues/new" class="toc-action">Report an issue</a></p></div></div></div></div></footer></body></html>
+<script src="site_libs/quarto-html/zenscroll-min.js"></script>
+</body></html>

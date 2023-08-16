@@ -2,62 +2,58 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://mltop10.info/index.html</loc>
-    <lastmod>2023-08-15T12:46:27.371Z</lastmod>
+    <lastmod>2023-08-16T06:02:06.630Z</lastmod>
   </url>
   <url>
-    <loc>https://mltop10.info/Project_Leaders.html</loc>
-    <lastmod>2023-08-15T12:46:27.372Z</lastmod>
-  </url>
-  <url>
-    <loc>https://mltop10.info/Contributors.html</loc>
-    <lastmod>2023-08-15T12:46:27.377Z</lastmod>
+    <loc>https://mltop10.info/notice.html</loc>
+    <lastmod>2023-08-16T06:02:19.647Z</lastmod>
   </url>
   <url>
     <loc>https://mltop10.info/ML01_2023-Adversarial_Attack.html</loc>
-    <lastmod>2023-08-15T12:46:27.381Z</lastmod>
+    <lastmod>2023-08-16T06:02:37.175Z</lastmod>
   </url>
   <url>
     <loc>https://mltop10.info/ML02_2023-Data_Poisoning_Attack.html</loc>
-    <lastmod>2023-08-15T12:46:27.383Z</lastmod>
+    <lastmod>2023-08-16T06:01:46.655Z</lastmod>
   </url>
   <url>
     <loc>https://mltop10.info/ML03_2023-Model_Inversion_Attack.html</loc>
-    <lastmod>2023-08-15T12:46:27.388Z</lastmod>
+    <lastmod>2023-08-16T06:01:46.661Z</lastmod>
   </url>
   <url>
     <loc>https://mltop10.info/ML04_2023-Membership_Inference_Attack.html</loc>
-    <lastmod>2023-08-15T12:46:27.390Z</lastmod>
+    <lastmod>2023-08-16T06:01:46.662Z</lastmod>
   </url>
   <url>
     <loc>https://mltop10.info/ML05_2023-Model_Stealing.html</loc>
-    <lastmod>2023-08-15T12:46:27.392Z</lastmod>
+    <lastmod>2023-08-16T06:01:46.670Z</lastmod>
   </url>
   <url>
     <loc>https://mltop10.info/ML06_2023-Corrupted_Packages.html</loc>
-    <lastmod>2023-08-15T12:46:27.396Z</lastmod>
+    <lastmod>2023-08-16T06:01:46.667Z</lastmod>
   </url>
   <url>
     <loc>https://mltop10.info/ML07_2023-Transfer_Learning_Attack.html</loc>
-    <lastmod>2023-08-15T12:46:27.397Z</lastmod>
+    <lastmod>2023-08-16T06:01:46.670Z</lastmod>
   </url>
   <url>
     <loc>https://mltop10.info/ML08_2023-Model_Skewing.html</loc>
-    <lastmod>2023-08-15T12:46:27.400Z</lastmod>
+    <lastmod>2023-08-16T06:01:46.673Z</lastmod>
   </url>
   <url>
     <loc>https://mltop10.info/ML09_2023-Output_Integrity_Attack.html</loc>
-    <lastmod>2023-08-15T12:46:27.402Z</lastmod>
+    <lastmod>2023-08-16T06:01:46.675Z</lastmod>
   </url>
   <url>
     <loc>https://mltop10.info/ML10_2023-Neural_Net_Reprogramming.html</loc>
-    <lastmod>2023-08-15T12:46:27.404Z</lastmod>
+    <lastmod>2023-08-16T06:03:47.469Z</lastmod>
   </url>
   <url>
     <loc>https://mltop10.info/OWASP-Machine-Learning-Security-Top-10--2023-.pdf</loc>
-    <lastmod>2023-08-15T12:46:23.569Z</lastmod>
+    <lastmod>2023-08-16T06:01:43.489Z</lastmod>
   </url>
   <url>
     <loc>https://mltop10.info/OWASP-Machine-Learning-Security-Top-10--2023-.epub</loc>
-    <lastmod>2023-08-15T12:46:27.284Z</lastmod>
+    <lastmod>2023-08-16T06:01:46.554Z</lastmod>
   </url>
 </urlset>

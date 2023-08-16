@@ -1,4 +1,5 @@
 ---
+layout: col-sidebar
 type: documentation
 altfooter: true
 level: 4
@@ -6,6 +7,7 @@ auto-migrated: 0
 document: OWASP Machine Learning Security Top Ten 2023
 year: 2023
 order: 3
+title: ML03:2023 Model Inversion Attack
 lang: en
 tags:
   [
@@ -20,25 +22,52 @@ detectability: 2
 technical: 4
 ---
 
-# ML03:2023 Model Inversion Attack {.unnumbered}
-
-|                                                                Threat agents/Attack vectors                                                                 |                               Security Weakness                                |                                       Impact                                       |
-| :---------------------------------------------------------------------------------------------------------------------------------------------------------: | :----------------------------------------------------------------------------: | :--------------------------------------------------------------------------------: |
-|                              Exploitability: 4 (Medium to exploit)<br>ML Application Specific: 5 <br>ML Operations Specific: 3                              |                         Detectability: 2<br>(Limited)                          | Technical: 4<br>Moderate technical knowledge required to carry out the attack)<br> |
-| Threat Agents: Attackers who have access to the model and input data<br>Attack Vectors: Submitting an image to the model and analyzing the model's response | Model's output can be used to infer sensitive information about the input data |          Confidential information about the input data can be compromised          |
-
-It is important to note that this chart is only a sample based on scenario
-below, and the actual risk assessment will depend on the specific circumstances
-of each machine learning system.
-
-**Description:**
+## Description
 
 Model inversion attacks occur when an attacker reverse-engineers the model to
 extract information from it.
 
-**Example Attack Scenario:**
+## How to Prevent
 
-Scenario 1: Stealing personal information from a face recognition model
+**Access control:** Limiting access to the model or its predictions can prevent
+attackers from obtaining the information needed to invert the model. This can be
+done by requiring authentication, encryption, or other forms of security when
+accessing the model or its predictions.
+
+**Input validation:** Validating the inputs to the model can prevent attackers
+from providing malicious data that can be used to invert the model. This can be
+done by checking the format, range, and consistency of the inputs before they
+are processed by the model.
+
+**Model transparency:** Making the model and its predictions transparent can
+help to detect and prevent model inversion attacks. This can be done by logging
+all inputs and outputs, providing explanations for the model's predictions, or
+allowing users to inspect the model's internal representations.
+
+**Regular monitoring:** Monitoring the model's predictions for anomalies can
+help to detect and prevent model inversion attacks. This can be done by tracking
+the distribution of inputs and outputs, comparing the model's predictions to
+ground truth data, or monitoring the model's performance over time.
+
+**Model retraining:** Regularly retraining the model can help to prevent the
+information leaked by model inversion attacks from becoming outdated. This can
+be done by incorporating new data and correcting any inaccuracies in the model's
+predictions.
+
+## Risk Factors
+
+|                                                                    Threat Agents/Attack Vectors                                                                     |                                Security Weakness                                |                              Impact                               |
+| :-----------------------------------------------------------------------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------: | :---------------------------------------------------------------: |
+|                                 Exploitability: 4 (Moderate) <br><br> _ML Application Specific: 5_ <br> _ML Operations Specific: 3_                                 |                          Detectability: 2 (Difficult)                           |                      Technical: 4 (Moderate)                      |
+| Threat Agents: Attackers who have access to the model and input data. <br><br> Attack Vectors: Submitting an image to the model and analyzing the model's response. | Model's output can be used to infer sensitive information about the input data. | Confidential information about the input data can be compromised. |
+
+It is important to note that this chart is only a sample based on
+[the scenario below](#scenario1) only. The actual risk assessment will depend on
+the specific circumstances of each machine learning system.
+
+## Example Attack Scenarios
+
+### Scenario \#1: Stealing personal information from a face recognition model {#scenario1}
 
 An attacker trains a deep learning model to perform face recognition. They then
 use this model to perform a model inversion attack on a different face
@@ -54,7 +83,7 @@ model\'s implementation or by accessing the model through an API. The attacker
 would then be able to recover the personal information of the individuals from
 the model\'s predictions.
 
-Scenario 2: Bypassing a bot detection model in online advertising
+### Scenario \#2: Bypassing a bot detection model in online advertising
 
 An advertiser wants to automate their advertising campaigns by using bots to
 perform actions such as clicking on ads and visiting websites. However, online
@@ -73,31 +102,4 @@ through a vulnerability in its implementation or by using an API. The end result
 of the attack was the advertiser successfully automating their advertising
 campaigns by making their bots appear as human users.
 
-**How to Prevent:**
-
-Access control: Limiting access to the model or its predictions can prevent
-attackers from obtaining the information needed to invert the model. This can be
-done by requiring authentication, encryption, or other forms of security when
-accessing the model or its predictions.
-
-Input validation: Validating the inputs to the model can prevent attackers from
-providing malicious data that can be used to invert the model. This can be done
-by checking the format, range, and consistency of the inputs before they are
-processed by the model.
-
-Model transparency: Making the model and its predictions transparent can help to
-detect and prevent model inversion attacks. This can be done by logging all
-inputs and outputs, providing explanations for the model's predictions, or
-allowing users to inspect the model's internal representations.
-
-Regular monitoring: Monitoring the model's predictions for anomalies can help to
-detect and prevent model inversion attacks. This can be done by tracking the
-distribution of inputs and outputs, comparing the model's predictions to ground
-truth data, or monitoring the model's performance over time.
-
-Model retraining: Regularly retraining the model can help to prevent the
-information leaked by model inversion attacks from becoming outdated. This can
-be done by incorporating new data and correcting any inaccuracies in the model's
-predictions.
-
-**References:**
+## References

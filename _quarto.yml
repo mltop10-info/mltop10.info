@@ -4,6 +4,8 @@ project:
 book:
   title: "OWASP Machine Learning Security Top 10 (2023)"
   site-url: "https://mltop10.info"
+  favicon: favicon.png
+  cover-image: cover.png
   search: true
   repo-url: "https://github.com/OWASP/www-project-machine-learning-security-top-10"
   repo-subdir: "2023/"
@@ -11,14 +13,17 @@ book:
   repo-actions: [edit, issue]
   downloads: [pdf, epub]
   reader-mode: true
+  open-graph: true
+  twitter-card:
+    creator: "@OWASP"
+    image: "cover.png"
   navbar:
     title: "OWASP Machine Learning Security Top 10 (2023)"
-    logo: OWASP_Logo_Transp.png
+    logo: favicon.png
     pinned: true
   chapters:
     - index.md
-    - Project_Leaders.md
-    - Contributors.md
+    - notice.md
     - part: "Top 10 2023 List"
       chapters:
         - ML01_2023-Adversarial_Attack.md
@@ -34,10 +39,11 @@ book:
 format:
   html:
     theme:
-      light: flatly
-      dark: darkly
+      light: cosmo
+      # dark: cyborg
     toc: true
     toc-title: "Page Contents"
+    number-sections: false
     anchor-sections: true
     # embed-resources: true
     smooth-scroll: true
@@ -48,5 +54,6 @@ format:
     comments:
       giscus:
         repo: "OWASP/www-project-machine-learning-security-top-10"
+        # theme: "https://raw.githubusercontent.com/quarto-dev/quarto-cli/main/src/resources/formats/html/bootstrap/themes/cosmo.scss"
   pdf: default
   epub: default

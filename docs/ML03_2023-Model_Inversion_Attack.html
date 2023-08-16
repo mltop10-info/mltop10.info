@@ -31,17 +31,16 @@ ul.task-list li input[type="checkbox"] {
 <meta name="quarto:offset" content="./">
 <link href="./ML04_2023-Membership_Inference_Attack.html" rel="next">
 <link href="./ML02_2023-Data_Poisoning_Attack.html" rel="prev">
+<link href="./favicon.png" rel="icon" type="image/png">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -65,6 +64,16 @@ ul.task-list li input[type="checkbox"] {
 <style>html{ scroll-behavior: smooth; }</style>
 
 
+<meta property="og:title" content="OWASP Machine Learning Security Top 10 (2023) - 5&nbsp; ML03:2023 Model Inversion Attack">
+<meta property="og:description" content="">
+<meta property="og:site-name" content="OWASP Machine Learning Security Top 10 (2023)">
+<meta name="twitter:title" content="OWASP Machine Learning Security Top 10 (2023) - 5&nbsp; ML03:2023 Model Inversion Attack">
+<meta name="twitter:description" content="">
+<meta name="twitter:image" content="https://mltop10.info/cover.png">
+<meta name="twitter:creator" content="@OWASP">
+<meta name="twitter:image-height" content="800">
+<meta name="twitter:image-width" content="512">
+<meta name="twitter:card" content="summary_large_image">
 </head>
 
 <body class="nav-sidebar floating nav-fixed">
@@ -75,7 +84,7 @@ ul.task-list li input[type="checkbox"] {
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container">
     <a href="./index.html" class="navbar-brand navbar-brand-logo">
-    <img src="./OWASP_Logo_Transp.png" alt="" class="navbar-logo">
+    <img src="./favicon.png" alt="" class="navbar-logo">
     </a>
     <a class="navbar-brand" href="./index.html">
     <span class="navbar-title">OWASP Machine Learning Security Top 10 (2023)</span>
@@ -100,7 +109,6 @@ ul.task-list li input[type="checkbox"] {
           </li>
       </ul>
     </div>
-  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
   <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Toggle reader mode">
   <div class="quarto-reader-toggle-btn">
   <i class="bi"></i>
@@ -115,7 +123,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./ML01_2023-Adversarial_Attack.html">Top 10 2023 List</a></li><li class="breadcrumb-item"><a href="./ML03_2023-Model_Inversion_Attack.html">ML03:2023 Model Inversion Attack</a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./ML01_2023-Adversarial_Attack.html">Top 10 2023 List</a></li><li class="breadcrumb-item"><a href="./ML03_2023-Model_Inversion_Attack.html"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">ML03:2023 Model Inversion Attack</span></a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -137,20 +145,12 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Introduction</span></a>
+  <a href="./index.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Introduction</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Project_Leaders.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Leaders</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./Contributors.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Contributors</span></a>
+  <a href="./notice.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Notice</span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
@@ -164,62 +164,52 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./ML01_2023-Adversarial_Attack.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">ML01:2023 Adversarial Attack</span></a>
+  <a href="./ML01_2023-Adversarial_Attack.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">ML01:2023 Adversarial Attack</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./ML02_2023-Data_Poisoning_Attack.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">ML02:2023 Data Poisoning Attack</span></a>
+  <a href="./ML02_2023-Data_Poisoning_Attack.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">ML02:2023 Data Poisoning Attack</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./ML03_2023-Model_Inversion_Attack.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">ML03:2023 Model Inversion Attack</span></a>
+  <a href="./ML03_2023-Model_Inversion_Attack.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">ML03:2023 Model Inversion Attack</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./ML04_2023-Membership_Inference_Attack.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">ML04:2023 Membership Inference Attack</span></a>
+  <a href="./ML04_2023-Membership_Inference_Attack.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">ML04:2023 Membership Inference Attack</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./ML05_2023-Model_Stealing.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">ML05:2023 Model Stealing</span></a>
+  <a href="./ML05_2023-Model_Stealing.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">ML05:2023 Model Stealing</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./ML06_2023-Corrupted_Packages.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">ML06:2023 Corrupted Packages</span></a>
+  <a href="./ML06_2023-Corrupted_Packages.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">ML06:2023 Corrupted Packages</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./ML07_2023-Transfer_Learning_Attack.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">ML07:2023 Transfer Learning Attack</span></a>
+  <a href="./ML07_2023-Transfer_Learning_Attack.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">ML07:2023 Transfer Learning Attack</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./ML08_2023-Model_Skewing.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">ML08:2023 Model Skewing</span></a>
+  <a href="./ML08_2023-Model_Skewing.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">ML08:2023 Model Skewing</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./ML09_2023-Output_Integrity_Attack.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">ML09:2023 Output Integrity Attack</span></a>
+  <a href="./ML09_2023-Output_Integrity_Attack.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">ML09:2023 Output Integrity Attack</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./ML10_2023-Neural_Net_Reprogramming.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">ML10:2023 Neural Net Reprogramming</span></a>
+  <a href="./ML10_2023-Neural_Net_Reprogramming.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">ML10:2023 Neural Net Reprogramming</span></a>
   </div>
 </li>
       </ul>
@@ -230,14 +220,28 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Page Contents</h2>
+   
+  <ul>
+  <li><a href="#description" id="toc-description" class="nav-link active" data-scroll-target="#description">Description</a></li>
+  <li><a href="#how-to-prevent" id="toc-how-to-prevent" class="nav-link" data-scroll-target="#how-to-prevent">How to Prevent</a></li>
+  <li><a href="#risk-factors" id="toc-risk-factors" class="nav-link" data-scroll-target="#risk-factors">Risk Factors</a></li>
+  <li><a href="#example-attack-scenarios" id="toc-example-attack-scenarios" class="nav-link" data-scroll-target="#example-attack-scenarios">Example Attack Scenarios</a>
+  <ul class="collapse">
+  <li><a href="#scenario1" id="toc-scenario1" class="nav-link" data-scroll-target="#scenario1">Scenario #1: Stealing personal information from a face recognition model</a></li>
+  <li><a href="#scenario-2-bypassing-a-bot-detection-model-in-online-advertising" id="toc-scenario-2-bypassing-a-bot-detection-model-in-online-advertising" class="nav-link" data-scroll-target="#scenario-2-bypassing-a-bot-detection-model-in-online-advertising">Scenario #2: Bypassing a bot detection model in online advertising</a></li>
+  </ul></li>
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
+  </ul>
+<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/OWASP/www-project-machine-learning-security-top-10/edit/master/2023/ML03_2023-Model_Inversion_Attack.md" class="toc-action">Edit this page</a></p><p><a href="https://github.com/OWASP/www-project-machine-learning-security-top-10/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">ML03:2023 Model Inversion Attack</h1>
+<h1 class="title"><span class="chapter-title">ML03:2023 Model Inversion Attack</span></h1>
 </div>
 
 
@@ -252,51 +256,66 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
+<section id="description" class="level2">
+<h2 class="anchored" data-anchor-id="description">Description</h2>
+<p>Model inversion attacks occur when an attacker reverse-engineers the model to extract information from it.</p>
+</section>
+<section id="how-to-prevent" class="level2">
+<h2 class="anchored" data-anchor-id="how-to-prevent">How to Prevent</h2>
+<p><strong>Access control:</strong> Limiting access to the model or its predictions can prevent attackers from obtaining the information needed to invert the model. This can be done by requiring authentication, encryption, or other forms of security when accessing the model or its predictions.</p>
+<p><strong>Input validation:</strong> Validating the inputs to the model can prevent attackers from providing malicious data that can be used to invert the model. This can be done by checking the format, range, and consistency of the inputs before they are processed by the model.</p>
+<p><strong>Model transparency:</strong> Making the model and its predictions transparent can help to detect and prevent model inversion attacks. This can be done by logging all inputs and outputs, providing explanations for the model’s predictions, or allowing users to inspect the model’s internal representations.</p>
+<p><strong>Regular monitoring:</strong> Monitoring the model’s predictions for anomalies can help to detect and prevent model inversion attacks. This can be done by tracking the distribution of inputs and outputs, comparing the model’s predictions to ground truth data, or monitoring the model’s performance over time.</p>
+<p><strong>Model retraining:</strong> Regularly retraining the model can help to prevent the information leaked by model inversion attacks from becoming outdated. This can be done by incorporating new data and correcting any inaccuracies in the model’s predictions.</p>
+</section>
+<section id="risk-factors" class="level2">
+<h2 class="anchored" data-anchor-id="risk-factors">Risk Factors</h2>
 <table class="table">
 <colgroup>
-<col style="width: 49%">
-<col style="width: 24%">
-<col style="width: 26%">
+<col style="width: 53%">
+<col style="width: 25%">
+<col style="width: 21%">
 </colgroup>
 <thead>
 <tr class="header">
-<th style="text-align: center;">Threat agents/Attack vectors</th>
+<th style="text-align: center;">Threat Agents/Attack Vectors</th>
 <th style="text-align: center;">Security Weakness</th>
 <th style="text-align: center;">Impact</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: center;">Exploitability: 4 (Medium to exploit)<br>ML Application Specific: 5 <br>ML Operations Specific: 3</td>
-<td style="text-align: center;">Detectability: 2<br>(Limited)</td>
-<td style="text-align: center;">Technical: 4<br>Moderate technical knowledge required to carry out the attack)<br></td>
+<td style="text-align: center;">Exploitability: 4 (Moderate) <br><br> <em>ML Application Specific: 5</em> <br> <em>ML Operations Specific: 3</em></td>
+<td style="text-align: center;">Detectability: 2 (Difficult)</td>
+<td style="text-align: center;">Technical: 4 (Moderate)</td>
 </tr>
 <tr class="even">
-<td style="text-align: center;">Threat Agents: Attackers who have access to the model and input data<br>Attack Vectors: Submitting an image to the model and analyzing the model’s response</td>
-<td style="text-align: center;">Model’s output can be used to infer sensitive information about the input data</td>
-<td style="text-align: center;">Confidential information about the input data can be compromised</td>
+<td style="text-align: center;">Threat Agents: Attackers who have access to the model and input data. <br><br> Attack Vectors: Submitting an image to the model and analyzing the model’s response.</td>
+<td style="text-align: center;">Model’s output can be used to infer sensitive information about the input data.</td>
+<td style="text-align: center;">Confidential information about the input data can be compromised.</td>
 </tr>
 </tbody>
 </table>
-<p>It is important to note that this chart is only a sample based on scenario below, and the actual risk assessment will depend on the specific circumstances of each machine learning system.</p>
-<p><strong>Description:</strong></p>
-<p>Model inversion attacks occur when an attacker reverse-engineers the model to extract information from it.</p>
-<p><strong>Example Attack Scenario:</strong></p>
-<p>Scenario 1: Stealing personal information from a face recognition model</p>
+<p>It is important to note that this chart is only a sample based on <a href="#scenario1">the scenario below</a> only. The actual risk assessment will depend on the specific circumstances of each machine learning system.</p>
+</section>
+<section id="example-attack-scenarios" class="level2">
+<h2 class="anchored" data-anchor-id="example-attack-scenarios">Example Attack Scenarios</h2>
+<section id="scenario1" class="level3">
+<h3 class="anchored" data-anchor-id="scenario1">Scenario #1: Stealing personal information from a face recognition model</h3>
 <p>An attacker trains a deep learning model to perform face recognition. They then use this model to perform a model inversion attack on a different face recognition model that is used by a company or organization. The attacker inputs images of individuals into the model and recovers the personal information of the individuals from the model's predictions, such as their name, address, or social security number.</p>
 <p>The attacker executed this attack by training the model to perform face recognition and then using this model to invert the predictions of another face recognition model. This could be done by exploiting a vulnerability in the model's implementation or by accessing the model through an API. The attacker would then be able to recover the personal information of the individuals from the model's predictions.</p>
-<p>Scenario 2: Bypassing a bot detection model in online advertising</p>
+</section>
+<section id="scenario-2-bypassing-a-bot-detection-model-in-online-advertising" class="level3">
+<h3 class="anchored" data-anchor-id="scenario-2-bypassing-a-bot-detection-model-in-online-advertising">Scenario #2: Bypassing a bot detection model in online advertising</h3>
 <p>An advertiser wants to automate their advertising campaigns by using bots to perform actions such as clicking on ads and visiting websites. However, online advertising platforms use bot detection models to prevent bots from performing these actions. To bypass these models, the advertiser trains a deep learning model for bot detection and uses it to invert the predictions of the bot detection model used by the online advertising platform. The advertiser inputs their bots into the model and is able to make the bots appear as human users, allowing them to bypass the bot detection and successfully execute their automated advertising campaigns.</p>
 <p>The advertiser executed this attack by training their own bot detection model and then using it to reverse the predictions of the bot detection model used by the online advertising platform. They were able to access this other model through a vulnerability in its implementation or by using an API. The end result of the attack was the advertiser successfully automating their advertising campaigns by making their bots appear as human users.</p>
-<p><strong>How to Prevent:</strong></p>
-<p>Access control: Limiting access to the model or its predictions can prevent attackers from obtaining the information needed to invert the model. This can be done by requiring authentication, encryption, or other forms of security when accessing the model or its predictions.</p>
-<p>Input validation: Validating the inputs to the model can prevent attackers from providing malicious data that can be used to invert the model. This can be done by checking the format, range, and consistency of the inputs before they are processed by the model.</p>
-<p>Model transparency: Making the model and its predictions transparent can help to detect and prevent model inversion attacks. This can be done by logging all inputs and outputs, providing explanations for the model’s predictions, or allowing users to inspect the model’s internal representations.</p>
-<p>Regular monitoring: Monitoring the model’s predictions for anomalies can help to detect and prevent model inversion attacks. This can be done by tracking the distribution of inputs and outputs, comparing the model’s predictions to ground truth data, or monitoring the model’s performance over time.</p>
-<p>Model retraining: Regularly retraining the model can help to prevent the information leaked by model inversion attacks from becoming outdated. This can be done by incorporating new data and correcting any inaccuracies in the model’s predictions.</p>
-<p><strong>References:</strong></p>
+</section>
+</section>
+<section id="references" class="level2">
+<h2 class="anchored" data-anchor-id="references">References</h2>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -319,121 +338,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
   toggleBodyColorPrimary();  
-  const disableStylesheet = (stylesheets) => {
-    for (let i=0; i < stylesheets.length; i++) {
-      const stylesheet = stylesheets[i];
-      stylesheet.rel = 'prefetch';
-    }
-  }
-  const enableStylesheet = (stylesheets) => {
-    for (let i=0; i < stylesheets.length; i++) {
-      const stylesheet = stylesheets[i];
-      stylesheet.rel = 'stylesheet';
-    }
-  }
-  const manageTransitions = (selector, allowTransitions) => {
-    const els = window.document.querySelectorAll(selector);
-    for (let i=0; i < els.length; i++) {
-      const el = els[i];
-      if (allowTransitions) {
-        el.classList.remove('notransition');
-      } else {
-        el.classList.add('notransition');
-      }
-    }
-  }
-  const toggleColorMode = (alternate) => {
-    // Switch the stylesheets
-    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
-    manageTransitions('#quarto-margin-sidebar .nav-link', false);
-    if (alternate) {
-      enableStylesheet(alternateStylesheets);
-      for (const sheetNode of alternateStylesheets) {
-        if (sheetNode.id === "quarto-bootstrap") {
-          toggleBodyColorMode(sheetNode);
-        }
-      }
-    } else {
-      disableStylesheet(alternateStylesheets);
-      toggleBodyColorPrimary();
-    }
-    manageTransitions('#quarto-margin-sidebar .nav-link', true);
-    // Switch the toggles
-    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
-    for (let i=0; i < toggles.length; i++) {
-      const toggle = toggles[i];
-      if (toggle) {
-        if (alternate) {
-          toggle.classList.add("alternate");     
-        } else {
-          toggle.classList.remove("alternate");
-        }
-      }
-    }
-    // Hack to workaround the fact that safari doesn't
-    // properly recolor the scrollbar when toggling (#1455)
-    if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
-      manageTransitions("body", false);
-      window.scrollTo(0, 1);
-      setTimeout(() => {
-        window.scrollTo(0, 0);
-        manageTransitions("body", true);
-      }, 40);  
-    }
-  }
-  const isFileUrl = () => { 
-    return window.location.protocol === 'file:';
-  }
-  const hasAlternateSentinel = () => {  
-    let styleSentinel = getColorSchemeSentinel();
-    if (styleSentinel !== null) {
-      return styleSentinel === "alternate";
-    } else {
-      return false;
-    }
-  }
-  const setStyleSentinel = (alternate) => {
-    const value = alternate ? "alternate" : "default";
-    if (!isFileUrl()) {
-      window.localStorage.setItem("quarto-color-scheme", value);
-    } else {
-      localAlternateSentinel = value;
-    }
-  }
-  const getColorSchemeSentinel = () => {
-    if (!isFileUrl()) {
-      const storageValue = window.localStorage.getItem("quarto-color-scheme");
-      return storageValue != null ? storageValue : localAlternateSentinel;
-    } else {
-      return localAlternateSentinel;
-    }
-  }
-  let localAlternateSentinel = 'default';
-  // Dark / light mode switch
-  window.quartoToggleColorScheme = () => {
-    // Read the current dark / light value 
-    let toAlternate = !hasAlternateSentinel();
-    toggleColorMode(toAlternate);
-    setStyleSentinel(toAlternate);
-  };
-  // Ensure there is a toggle, if there isn't float one in the top right
-  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
-    const a = window.document.createElement('a');
-    a.classList.add('top-right');
-    a.classList.add('quarto-color-scheme-toggle');
-    a.href = "";
-    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
-    const i = window.document.createElement("i");
-    i.classList.add('bi');
-    a.appendChild(i);
-    window.document.body.appendChild(a);
-  }
-  // Switch to dark mode if need be
-  if (hasAlternateSentinel()) {
-    toggleColorMode(true);
-  } else {
-    toggleColorMode(false);
-  }
   const icon = "";
   const anchorJS = new window.AnchorJS();
   anchorJS.options = {
@@ -666,12 +570,12 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
       <a href="./ML02_2023-Data_Poisoning_Attack.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">ML02:2023 Data Poisoning Attack</span>
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">ML02:2023 Data Poisoning Attack</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
       <a href="./ML04_2023-Membership_Inference_Attack.html" class="pagination-link">
-        <span class="nav-page-text">ML04:2023 Membership Inference Attack</span> <i class="bi bi-arrow-right-short"></i>
+        <span class="nav-page-text"><span class="chapter-title">ML04:2023 Membership Inference Attack</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
@@ -679,5 +583,5 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 
 
 
-<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/OWASP/www-project-machine-learning-security-top-10/edit/master/2023/ML03_2023-Model_Inversion_Attack.md" class="toc-action">Edit this page</a></p><p><a href="https://github.com/OWASP/www-project-machine-learning-security-top-10/issues/new" class="toc-action">Report an issue</a></p></div></div></div></div></footer><script src="site_libs/quarto-html/zenscroll-min.js"></script>
+<script src="site_libs/quarto-html/zenscroll-min.js"></script>
 </body></html>

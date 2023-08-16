@@ -1,4 +1,5 @@
 ---
+layout: col-sidebar
 type: documentation
 altfooter: true
 level: 4
@@ -6,6 +7,7 @@ auto-migrated: 0
 document: OWASP Machine Learning Security Top Ten 2023
 year: 2023
 order: 10
+title: ML10:2023 Neural Net Reprogramming
 lang: en
 tags:
   [
@@ -15,28 +17,44 @@ tags:
     mltop10,
     mlsectop10,
   ]
-exploitability: 4
+exploitability: 5
 detectability: 3
 technical: 3
 ---
 
-# ML10:2023 Neural Net Reprogramming {.unnumbered}
-
-|                                                                               Threat agents/Attack vectors                                                                               |                                                                         Security Weakness                                                                          |                                                                                                                                    Impact                                                                                                                                     |
-| :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :----------------------------------------------------------------------------------------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
-|                                                 Exploitability: 4 (Easy)<br>ML Application Specific: 4<br>ML Operations Specific: 4<br>                                                  |                                                                        Detectability: 3<br>                                                                        |                                                                                                                               Technical: 3<br>                                                                                                                                |
-| Malicious individuals or organizations with knowledge and resources to manipulate deep learning models.<br>Malicious insiders within the organization developing the deep learning model | Insufficient access controls to the model's code and parameters<br>Lack of proper secure coding practices<br>Inadequate monitoring and logging of model's activity | Model's predictions can be manipulated to achieve desired results.<br>Confidential information within the model can be extracted.<br>Decisions based on the model's predictions can be impacted negatively.<br>Reputation and credibility of the organization can be affected |
-
-It is important to note that this chart is only a sample based on scenario
-below, and the actual risk assessment will depend on the specific circumstances
-of each machine learning system.
-
-**Description:**
+## Description
 
 Neural net reprogramming attacks occur when an attacker manipulates the model\'s
 parameters to cause it to behave in an undesirable way.
 
-**Example Attack Scenario:**
+## How to Prevent
+
+**Regularisation:** Adding regularisation techniques like L1 or L2
+regularization to the loss function helps to prevent overfitting and reduce the
+chance of neural net reprogramming attacks.
+
+**Robust Model Design:** Designing models with robust architectures and
+activation functions can help reduce the chances of successful reprogramming
+attacks.
+
+**Cryptographic Techniques:** Cryptographic techniques can be used to secure the
+parameters and weights of the model, and prevent unauthorized access or
+manipulation of these parameters.
+
+## Risk Factors
+
+|                                                                                       Threat Agents/Attack Vectors                                                                                        |                                                                                 Security Weakness                                                                                 |                                                                                                                                             Impact                                                                                                                                              |
+| :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
+|                                                      Exploitability: 5 (Easy) <br><br> _ML Application Specific: 4_ <br> _ML Operations Specific: 4_                                                      |                                                                            Detectability: 3 (Moderate)                                                                            |                                                                                                                                     Technical: 3 (Moderate)                                                                                                                                     |
+| Threat Actor: Malicious individuals or organizations with knowledge and resources to manipulate deep learning models. <br> Malicious insiders within the organization developing the deep learning model. | Insufficient access controls to the model's code and parameters. <br><br> Lack of proper secure coding practices. <br><br> Inadequate monitoring and logging of model's activity. | Model's predictions can be manipulated to achieve desired results. <br><br>Confidential information within the model can be extracted. <br><br> Decisions based on the model's predictions can be impacted negatively. <br><br> Reputation and credibility of the organization can be affected. |
+
+It is important to note that this chart is only a sample based on
+[the scenario below](#scenario1) only. The actual risk assessment will depend on
+the specific circumstances of each machine learning system.
+
+## Example Attack Scenarios
+
+### Scenario \#1: Financial gain through neural net reprogramming {#scenario1}
 
 Consider a scenario where a bank is using a machine learning model to identify
 handwritten characters on cheques to automate their clearing process. The model
@@ -57,17 +75,4 @@ the clearing process, which the model will process as valid due to the
 manipulated parameters. This can result in significant financial loss to the
 bank.
 
-**How to Prevent:**
-
-Regularization: Adding regularization techniques like L1 or L2 regularization to
-the loss function helps to prevent overfitting and reduce the chance of neural
-net reprogramming attacks.
-
-Robust Model Design: Designing models with robust architectures and activation
-functions can help reduce the chances of successful reprogramming attacks.
-
-Cryptographic Techniques: Cryptographic techniques can be used to secure the
-parameters and weights of the model, and prevent unauthorized access or
-manipulation of these parameters.
-
-**References:**
+## References
