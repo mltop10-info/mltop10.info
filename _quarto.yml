@@ -58,6 +58,10 @@ format:
     comments:
       giscus:
         repo: OWASP/www-project-machine-learning-security-top-10
+        category: Machine Learning Security Topics
+        reactions-enabled: true
+        loading: lazy
+        input-position: top
         # theme: "https://raw.githubusercontent.com/quarto-dev/quarto-cli/main/src/resources/formats/html/bootstrap/themes/cosmo.scss"
   pdf:
     documentclass: report
