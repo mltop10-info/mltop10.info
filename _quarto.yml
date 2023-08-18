@@ -56,9 +56,9 @@ format:
     citations-hover: true
     footnotes-hover: true
     comments:
-      hypothesis:
-        theme: clean
-        openSidebar: false
+      giscus:
+        repo: OWASP/www-project-machine-learning-security-top-10
+        # theme: "https://raw.githubusercontent.com/quarto-dev/quarto-cli/main/src/resources/formats/html/bootstrap/themes/cosmo.scss"
   pdf:
     documentclass: report
     # classoptions: twocolumn
