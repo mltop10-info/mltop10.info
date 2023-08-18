@@ -58,7 +58,8 @@ format:
     comments:
       giscus:
         repo: OWASP/www-project-machine-learning-security-top-10
-        category: Machine Learning Security Topics
+        # category: Machine Learning Security Topics
+        category-id: DIC_kwDODGfvrc4CYsJC
         reactions-enabled: true
         loading: lazy
         input-position: top
