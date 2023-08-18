@@ -1,4 +1,7 @@
-# Acknowledgements
+---
+title: Acknowledgements
+comments: false
+---
 
 ## Contributors
 

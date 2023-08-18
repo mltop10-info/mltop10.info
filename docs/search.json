@@ -1,29 +1,22 @@
 [
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "OWASP Machine Learning Security Top 10 (2023 edition)",
-    "section": "",
-    "text": "Introduction"
-  },
-  {
     "objectID": "index.html#overview",
     "href": "index.html#overview",
-    "title": "OWASP Machine Learning Security Top 10 (2023 edition)",
+    "title": "Introduction",
     "section": "Overview",
     "text": "Overview\nThe primary aim of of the OWASP Machine Learning Security Top 10 project is to deliver an overview of the top 10 security issues of machine learning systems. As such, a major goal of this project is to develop a high quality deliverable, reviewed by industry peers."
   },
   {
     "objectID": "index.html#target-audience",
     "href": "index.html#target-audience",
-    "title": "OWASP Machine Learning Security Top 10 (2023 edition)",
+    "title": "Introduction",
     "section": "Target Audience",
     "text": "Target Audience\nThe primary audience for the deliverables in this project are developers, machine learning engineering and operational practitioners, and application security experts. While each of these roles build, operate and secure machine learning systems, the content is not aimed to be exclusively at them. The content will aim to specify where appropriate the level of understanding required for specific technology domains."
   },
   {
     "objectID": "index.html#scope",
     "href": "index.html#scope",
-    "title": "OWASP Machine Learning Security Top 10 (2023 edition)",
+    "title": "Introduction",
     "section": "Scope",
     "text": "Scope\nThis project will provide an overview of the top 10 security issues of machine learning systems. Due to the rapid adoption of machine learning systems, there are related projects within OWASP and other organisations, that may have narrower or broader scope than this project. As an example, while adversarial attacks is a category of threats, this project will also cover non-adversarial scenarios, such as security hygiene of machine learning operational and engineering workflows."
   },

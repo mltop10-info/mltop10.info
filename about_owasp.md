@@ -1,4 +1,7 @@
-# About OWASP
+---
+title: About OWASP
+comments: false
+---
 
 The Open Worldwide Application Security Project (OWASP) is an open community
 dedicated to enabling organizations to develop, purchase, and maintain

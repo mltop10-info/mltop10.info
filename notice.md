@@ -1,4 +1,7 @@
-# Notice
+---
+title: Notice
+comments: false
+---
 
 ## Release
 
