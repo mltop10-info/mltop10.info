@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>OWASP Machine Learning Security Top 10 (2023 edition) - ML06:2023 Corrupted Packages</title>
+<title>OWASP Machine Learning Security Top 10 - Draft release v0.2 - Notice</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -29,8 +29,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./ML07_2023-Transfer_Learning_Attack.html" rel="next">
-<link href="./ML05_2023-Model_Stealing.html" rel="prev">
+<link href="./about_owasp.html" rel="next">
+<link href="./index.html" rel="prev">
 <link href="./favicon.png" rel="icon" type="image/png">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -64,10 +64,13 @@ ul.task-list li input[type="checkbox"] {
 <style>html{ scroll-behavior: smooth; }</style>
 
 
-<meta property="og:title" content="OWASP Machine Learning Security Top 10 (2023 edition) - 9&nbsp; ML06:2023 Corrupted Packages">
+<meta property="og:title" content="OWASP Machine Learning Security Top 10 - Draft release v0.2 - 2&nbsp; Notice">
 <meta property="og:description" content="">
-<meta property="og:site-name" content="OWASP Machine Learning Security Top 10 (2023 edition)">
-<meta name="twitter:title" content="OWASP Machine Learning Security Top 10 (2023 edition) - 9&nbsp; ML06:2023 Corrupted Packages">
+<meta property="og:image" content="https://mltop10.info/license.png">
+<meta property="og:site-name" content="OWASP Machine Learning Security Top 10 - Draft release v0.2">
+<meta property="og:image:height" content="66">
+<meta property="og:image:width" content="182">
+<meta name="twitter:title" content="OWASP Machine Learning Security Top 10 - Draft release v0.2 - 2&nbsp; Notice">
 <meta name="twitter:description" content="">
 <meta name="twitter:image" content="https://mltop10.info/cover.png">
 <meta name="twitter:creator" content="@OWASP">
@@ -87,7 +90,7 @@ ul.task-list li input[type="checkbox"] {
     <img src="./favicon.png" alt="" class="navbar-logo">
     </a>
     <a class="navbar-brand" href="./index.html">
-    <span class="navbar-title">OWASP Machine Learning Security Top 10 (2023 edition)</span>
+    <span class="navbar-title">OWASP Machine Learning Security Top 10 (2023 edition) - Draft release v0.2</span>
     </a>
   </div>
         <div class="quarto-navbar-tools ms-auto tools-wide">
@@ -107,7 +110,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./ML01_2023-Adversarial_Attack.html">Top 10 2023 List</a></li><li class="breadcrumb-item"><a href="./ML06_2023-Corrupted_Packages.html"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">ML06:2023 Corrupted Packages</span></a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./notice.html"><span class="chapter-title">Notice</span></a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -134,7 +137,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./notice.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Notice</span></a>
+  <a href="./notice.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Notice</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -178,7 +181,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./ML06_2023-Corrupted_Packages.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">ML06:2023 Corrupted Packages</span></a>
+  <a href="./ML06_2023-Corrupted_Packages.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">ML06:2023 Corrupted Packages</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -203,16 +206,27 @@ ul.task-list li input[type="checkbox"] {
 </li>
       </ul>
   </li>
-        <li class="sidebar-item">
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
+ <span class="menu-text">Appendices</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./acknowledgements.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Acknowledgements</span></a>
   </div>
 </li>
-        <li class="sidebar-item">
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./glossary.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Glossary</span></a>
   </div>
 </li>
+      </ul>
+  </li>
     </ul>
     </div>
 </nav>
@@ -223,23 +237,18 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Page Contents</h2>
    
   <ul>
-  <li><a href="#description" id="toc-description" class="nav-link active" data-scroll-target="#description">Description</a></li>
-  <li><a href="#how-to-prevent" id="toc-how-to-prevent" class="nav-link" data-scroll-target="#how-to-prevent">How to Prevent</a></li>
-  <li><a href="#risk-factors" id="toc-risk-factors" class="nav-link" data-scroll-target="#risk-factors">Risk Factors</a></li>
-  <li><a href="#example-attack-scenarios" id="toc-example-attack-scenarios" class="nav-link" data-scroll-target="#example-attack-scenarios">Example Attack Scenarios</a>
-  <ul class="collapse">
-  <li><a href="#scenario1" id="toc-scenario1" class="nav-link" data-scroll-target="#scenario1">Scenario #1: Attack on a machine learning project in an organization</a></li>
-  </ul></li>
-  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
+  <li><a href="#release" id="toc-release" class="nav-link active" data-scroll-target="#release">Release</a></li>
+  <li><a href="#lead-authors" id="toc-lead-authors" class="nav-link" data-scroll-target="#lead-authors">Lead Authors</a></li>
+  <li><a href="#copyright-and-license" id="toc-copyright-and-license" class="nav-link" data-scroll-target="#copyright-and-license">Copyright and License</a></li>
   </ul>
-<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/OWASP/www-project-machine-learning-security-top-10/edit/master/2023/ML06_2023-Corrupted_Packages.md" class="toc-action">Edit this page</a></p><p><a href="https://github.com/OWASP/www-project-machine-learning-security-top-10/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
+<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/OWASP/www-project-machine-learning-security-top-10/edit/master/2023/notice.md" class="toc-action">Edit this page</a></p><p><a href="https://github.com/OWASP/www-project-machine-learning-security-top-10/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-title">ML06:2023 Corrupted Packages</span></h1>
+<h1 class="title"><span class="chapter-title">Notice</span></h1>
 </div>
 
 
@@ -254,61 +263,26 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<section id="description" class="level2">
-<h2 class="anchored" data-anchor-id="description">Description</h2>
-<p>Corrupted packages attacks occur when an attacker modifies or replaces a machine learning library or model that is used by a system.</p>
+<section id="release" class="level2">
+<h2 class="anchored" data-anchor-id="release">Release</h2>
+<p>This document is currently at v0.2 draft release.</p>
 </section>
-<section id="how-to-prevent" class="level2">
-<h2 class="anchored" data-anchor-id="how-to-prevent">How to Prevent</h2>
-<p><strong>Verify Package Signatures:</strong> Before installing any packages, verify the digital signatures of the packages to ensure that they have not been tampered with.</p>
-<p><strong>Use Secure Package Repositories:</strong> Use secure package repositories, such as Anaconda, that enforce strict security measures and have a vetting process for packages.</p>
-<p><strong>Keep Packages Up-to-date:</strong> Regularly update all packages to ensure that any vulnerabilities are patched.</p>
-<p><strong>Use Virtual Environments:</strong> Use virtual environments to isolate packages and libraries from the rest of the system. This makes it easier to detect any malicious packages and remove them.</p>
-<p><strong>Perform Code Reviews:</strong> Regularly perform code reviews on all packages and libraries used in a project to detect any malicious code.</p>
-<p><strong>Use Package Verification Tools:</strong> Use tools such as PEP 476 and Secure Package Install to verify the authenticity and integrity of packages before installation.</p>
-<p><strong>Educate Developers:</strong> Educate developers on the risks associated with Corrupted Packages Attacks and the importance of verifying packages before installation.</p>
+<section id="lead-authors" class="level2">
+<h2 class="anchored" data-anchor-id="lead-authors">Lead Authors</h2>
+<ul>
+<li><a href="mailto:shain.singh@owasp.org">Shain Singh</a></li>
+<li><a href="mailto:sagar.bhure@owasp.org">Sagar Bhure</a></li>
+<li><a href="mailto:rob.vanderveer@owasp.org">Rob van der Veer</a></li>
+</ul>
 </section>
-<section id="risk-factors" class="level2">
-<h2 class="anchored" data-anchor-id="risk-factors">Risk Factors</h2>
-<table class="table">
-<colgroup>
-<col style="width: 52%">
-<col style="width: 15%">
-<col style="width: 32%">
-</colgroup>
-<thead>
-<tr class="header">
-<th style="text-align: center;">Threat Agents/Attack Vectors</th>
-<th style="text-align: center;">Security Weakness</th>
-<th style="text-align: center;">Impact</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: center;">Exploitability: 5 (Easy) <br><br> <em>ML Application Specific: 5</em> <br> <em>ML Operations Specific: 3</em></td>
-<td style="text-align: center;">Detectability: 5 (Easy)</td>
-<td style="text-align: center;">Technical: 4 (Moderate)</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">Threat Actor: Malicious attacker. <br><br> Attack Vector: Modifying code of open-source package used by the machine learning project.</td>
-<td style="text-align: center;">Relying on untrusted third-party code.</td>
-<td style="text-align: center;">Compromise of the machine learning project and potential harm to the organization.</td>
-</tr>
-</tbody>
-</table>
-<p>It is important to note that this chart is only a sample based on <a href="#scenario1">the scenario below</a> only. The actual risk assessment will depend on the specific circumstances of each machine learning system.</p>
-</section>
-<section id="example-attack-scenarios" class="level2">
-<h2 class="anchored" data-anchor-id="example-attack-scenarios">Example Attack Scenarios</h2>
-<section id="scenario1" class="level3">
-<h3 class="anchored" data-anchor-id="scenario1">Scenario #1: Attack on a machine learning project in an organization</h3>
-<p>A malicious attacker wants to compromise a machine learning project being developed by a large organization. The attacker knows that the project relies on several open-source packages and libraries and wants to find a way to compromise the project.</p>
-<p>The attacker executed the attack by modifying the code of one of the packages that the project relies on, such as NumPy or Scikit-learn. The attacker then uploads this modified version of the package to a public repository, such as PyPI, making it available for others to download and use. When the victim organization downloads and installs the package, the attacker’s malicious code is also installed and can be used to compromise the project.</p>
-<p>This type of attack can be particularly dangerous as it can go unnoticed for a long time, since the victim may not realize that the package they are using has been compromised. The attacker’s malicious code could be used to steal sensitive information, modify results, or even cause the machine learning model to fail.</p>
-</section>
-</section>
-<section id="references" class="level2">
-<h2 class="anchored" data-anchor-id="references">References</h2>
+<section id="copyright-and-license" class="level2">
+<h2 class="anchored" data-anchor-id="copyright-and-license">Copyright and License</h2>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="license.png" class="img-fluid figure-img" data-fig.cap=""></p>
+</figure>
+</div>
+<p>Copyright © 2003-2023 The OWASP Foundation. This document is released under the [Creative Commons Attribution Share-Alike 4.0 license][https://creativecommons.org/licenses/by-sa/4.0/]. For any reuse or distribution, you must make it clear to others the license terms of this work.</p>
 
 
 </section>
@@ -561,17 +535,15 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
 });
 </script>
-<script src="https://giscus.app/client.js" data-repo="OWASP/www-project-machine-learning-security-top-10" data-repo-id="MDEwOlJlcG9zaXRvcnkyMDgxMzgxNTc=" data-category="General" data-category-id="DIC_kwDODGfvrc4CYsJC" data-mapping="title" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="top" data-theme="light" data-lang="en" crossorigin="anonymous" data-loading="lazy" async="">
-</script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./ML05_2023-Model_Stealing.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">ML05:2023 Model Stealing</span></span>
+      <a href="./index.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">Introduction</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./ML07_2023-Transfer_Learning_Attack.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-title">ML07:2023 Transfer Learning Attack</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./about_owasp.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-title">About OWASP</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

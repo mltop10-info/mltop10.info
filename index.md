@@ -3,6 +3,16 @@ title: Introduction
 comments: false
 ---
 
+::: {.callout-important}
+
+### Important
+
+The current version of this work is in draft and is being modified frequently.
+Please refer to the [project wiki](https://github.com/OWASP/www-project-machine-learning-security-top-10/wiki)
+for information on how to contribute and release timelines.
+
+:::
+
 ## Overview
 
 The primary aim of of the OWASP Machine Learning Security Top 10 project is to

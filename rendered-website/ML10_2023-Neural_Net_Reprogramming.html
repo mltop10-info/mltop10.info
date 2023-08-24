@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>OWASP Machine Learning Security Top 10 (2023 edition)</title>
+<title>OWASP Machine Learning Security Top 10 - Draft release v0.2 - ML10:2023 Neural Net Reprogramming</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -29,7 +29,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./notice.html" rel="next">
+<link href="./acknowledgements.html" rel="next">
+<link href="./ML09_2023-Output_Integrity_Attack.html" rel="prev">
 <link href="./favicon.png" rel="icon" type="image/png">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -63,13 +64,10 @@ ul.task-list li input[type="checkbox"] {
 <style>html{ scroll-behavior: smooth; }</style>
 
 
-<meta property="og:title" content="OWASP Machine Learning Security Top 10 (2023 edition)">
+<meta property="og:title" content="OWASP Machine Learning Security Top 10 - Draft release v0.2 - 13&nbsp; ML10:2023 Neural Net Reprogramming">
 <meta property="og:description" content="">
-<meta property="og:image" content="https://mltop10.info/cover.png">
-<meta property="og:site-name" content="OWASP Machine Learning Security Top 10 (2023 edition)">
-<meta property="og:image:height" content="800">
-<meta property="og:image:width" content="512">
-<meta name="twitter:title" content="OWASP Machine Learning Security Top 10 (2023 edition)">
+<meta property="og:site-name" content="OWASP Machine Learning Security Top 10 - Draft release v0.2">
+<meta name="twitter:title" content="OWASP Machine Learning Security Top 10 - Draft release v0.2 - 13&nbsp; ML10:2023 Neural Net Reprogramming">
 <meta name="twitter:description" content="">
 <meta name="twitter:image" content="https://mltop10.info/cover.png">
 <meta name="twitter:creator" content="@OWASP">
@@ -89,7 +87,7 @@ ul.task-list li input[type="checkbox"] {
     <img src="./favicon.png" alt="" class="navbar-logo">
     </a>
     <a class="navbar-brand" href="./index.html">
-    <span class="navbar-title">OWASP Machine Learning Security Top 10 (2023 edition)</span>
+    <span class="navbar-title">OWASP Machine Learning Security Top 10 (2023 edition) - Draft release v0.2</span>
     </a>
   </div>
         <div class="quarto-navbar-tools ms-auto tools-wide">
@@ -109,7 +107,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html"><span class="chapter-title">Introduction</span></a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./ML01_2023-Adversarial_Attack.html">Top 10 2023 List</a></li><li class="breadcrumb-item"><a href="./ML10_2023-Neural_Net_Reprogramming.html"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">ML10:2023 Neural Net Reprogramming</span></a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -131,7 +129,7 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Introduction</span></a>
+  <a href="./index.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Introduction</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -200,21 +198,32 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./ML10_2023-Neural_Net_Reprogramming.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">ML10:2023 Neural Net Reprogramming</span></a>
+  <a href="./ML10_2023-Neural_Net_Reprogramming.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">ML10:2023 Neural Net Reprogramming</span></a>
   </div>
 </li>
       </ul>
   </li>
-        <li class="sidebar-item">
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
+ <span class="menu-text">Appendices</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./acknowledgements.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Acknowledgements</span></a>
   </div>
 </li>
-        <li class="sidebar-item">
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./glossary.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Glossary</span></a>
   </div>
 </li>
+      </ul>
+  </li>
     </ul>
     </div>
 </nav>
@@ -225,18 +234,23 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Page Contents</h2>
    
   <ul>
-  <li><a href="#overview" id="toc-overview" class="nav-link active" data-scroll-target="#overview">Overview</a></li>
-  <li><a href="#target-audience" id="toc-target-audience" class="nav-link" data-scroll-target="#target-audience">Target Audience</a></li>
-  <li><a href="#scope" id="toc-scope" class="nav-link" data-scroll-target="#scope">Scope</a></li>
+  <li><a href="#description" id="toc-description" class="nav-link active" data-scroll-target="#description">Description</a></li>
+  <li><a href="#how-to-prevent" id="toc-how-to-prevent" class="nav-link" data-scroll-target="#how-to-prevent">How to Prevent</a></li>
+  <li><a href="#risk-factors" id="toc-risk-factors" class="nav-link" data-scroll-target="#risk-factors">Risk Factors</a></li>
+  <li><a href="#example-attack-scenarios" id="toc-example-attack-scenarios" class="nav-link" data-scroll-target="#example-attack-scenarios">Example Attack Scenarios</a>
+  <ul class="collapse">
+  <li><a href="#scenario1" id="toc-scenario1" class="nav-link" data-scroll-target="#scenario1">Scenario #1: Financial gain through neural net reprogramming</a></li>
+  </ul></li>
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
   </ul>
-<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/OWASP/www-project-machine-learning-security-top-10/edit/master/2023/index.md" class="toc-action">Edit this page</a></p><p><a href="https://github.com/OWASP/www-project-machine-learning-security-top-10/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
+<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/OWASP/www-project-machine-learning-security-top-10/edit/master/2023/ML10_2023-Neural_Net_Reprogramming.md" class="toc-action">Edit this page</a></p><p><a href="https://github.com/OWASP/www-project-machine-learning-security-top-10/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Introduction</h1>
+<h1 class="title"><span class="chapter-title">ML10:2023 Neural Net Reprogramming</span></h1>
 </div>
 
 
@@ -251,18 +265,57 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-
-<section id="overview" class="level2">
-<h2 class="anchored" data-anchor-id="overview">Overview</h2><p><img src="cover.png" title="OWASP Machine Learning Security Top 10 (2023 edition)" class="quarto-cover-image img-fluid"></p>
-<p>The primary aim of of the OWASP Machine Learning Security Top 10 project is to deliver an overview of the top 10 security issues of machine learning systems. As such, a major goal of this project is to develop a high quality deliverable, reviewed by industry peers.</p>
+<section id="description" class="level2">
+<h2 class="anchored" data-anchor-id="description">Description</h2>
+<p>Neural net reprogramming attacks occur when an attacker manipulates the model's parameters to cause it to behave in an undesirable way.</p>
 </section>
-<section id="target-audience" class="level2">
-<h2 class="anchored" data-anchor-id="target-audience">Target Audience</h2>
-<p>The primary audience for the deliverables in this project are developers, machine learning engineering and operational practitioners, and application security experts. While each of these roles build, operate and secure machine learning systems, the content is not aimed to be exclusively at them. The content will aim to specify where appropriate the level of understanding required for specific technology domains.</p>
+<section id="how-to-prevent" class="level2">
+<h2 class="anchored" data-anchor-id="how-to-prevent">How to Prevent</h2>
+<p><strong>Regularisation:</strong> Adding regularisation techniques like L1 or L2 regularization to the loss function helps to prevent overfitting and reduce the chance of neural net reprogramming attacks.</p>
+<p><strong>Robust Model Design:</strong> Designing models with robust architectures and activation functions can help reduce the chances of successful reprogramming attacks.</p>
+<p><strong>Cryptographic Techniques:</strong> Cryptographic techniques can be used to secure the parameters and weights of the model, and prevent unauthorized access or manipulation of these parameters.</p>
 </section>
-<section id="scope" class="level2">
-<h2 class="anchored" data-anchor-id="scope">Scope</h2>
-<p>This project will provide an overview of the top 10 security issues of machine learning systems. Due to the rapid adoption of machine learning systems, there are related projects within OWASP and other organisations, that may have narrower or broader scope than this project. As an example, while adversarial attacks is a category of threats, this project will also cover non-adversarial scenarios, such as security hygiene of machine learning operational and engineering workflows.</p>
+<section id="risk-factors" class="level2">
+<h2 class="anchored" data-anchor-id="risk-factors">Risk Factors</h2>
+<table class="table">
+<colgroup>
+<col style="width: 30%">
+<col style="width: 26%">
+<col style="width: 43%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;">Threat Agents/Attack Vectors</th>
+<th style="text-align: center;">Security Weakness</th>
+<th style="text-align: center;">Impact</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">Exploitability: 5 (Easy) <br><br> <em>ML Application Specific: 4</em> <br> <em>ML Operations Specific: 4</em></td>
+<td style="text-align: center;">Detectability: 3 (Moderate)</td>
+<td style="text-align: center;">Technical: 3 (Moderate)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Threat Actor: Malicious individuals or organizations with knowledge and resources to manipulate deep learning models. <br> Malicious insiders within the organization developing the deep learning model.</td>
+<td style="text-align: center;">Insufficient access controls to the model’s code and parameters. <br><br> Lack of proper secure coding practices. <br><br> Inadequate monitoring and logging of model’s activity.</td>
+<td style="text-align: center;">Model’s predictions can be manipulated to achieve desired results. <br><br>Confidential information within the model can be extracted. <br><br> Decisions based on the model’s predictions can be impacted negatively. <br><br> Reputation and credibility of the organization can be affected.</td>
+</tr>
+</tbody>
+</table>
+<p>It is important to note that this chart is only a sample based on <a href="#scenario1">the scenario below</a> only. The actual risk assessment will depend on the specific circumstances of each machine learning system.</p>
+</section>
+<section id="example-attack-scenarios" class="level2">
+<h2 class="anchored" data-anchor-id="example-attack-scenarios">Example Attack Scenarios</h2>
+<section id="scenario1" class="level3">
+<h3 class="anchored" data-anchor-id="scenario1">Scenario #1: Financial gain through neural net reprogramming</h3>
+<p>Consider a scenario where a bank is using a machine learning model to identify handwritten characters on cheques to automate their clearing process. The model has been trained on a large dataset of handwritten characters, and it has been designed to accurately identify the characters based on specific parameters such as size, shape, slant, and spacing.</p>
+<p>An attacker who wants to exploit the Neural Net Reprogramming attack may manipulate the parameters of the model by altering the images in the training dataset or directly modifying the parameters in the model. This can result in the model being reprogrammed to identify characters differently. For example, the attacker could change the parameters so that the model identifies the character “5” as the character “2”, leading to incorrect amounts being processed.</p>
+<p>The attacker can exploit this vulnerability by introducing forged cheques into the clearing process, which the model will process as valid due to the manipulated parameters. This can result in significant financial loss to the bank.</p>
+</section>
+</section>
+<section id="references" class="level2">
+<h2 class="anchored" data-anchor-id="references">References</h2>
 
 
 </section>
@@ -515,12 +568,17 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
 });
 </script>
+<script src="https://giscus.app/client.js" data-repo="OWASP/www-project-machine-learning-security-top-10" data-repo-id="MDEwOlJlcG9zaXRvcnkyMDgxMzgxNTc=" data-category="General" data-category-id="DIC_kwDODGfvrc4CYsJC" data-mapping="title" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="top" data-theme="light" data-lang="en" crossorigin="anonymous" data-loading="lazy" async="">
+</script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
+      <a href="./ML09_2023-Output_Integrity_Attack.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">ML09:2023 Output Integrity Attack</span></span>
+      </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./notice.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-title">Notice</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./acknowledgements.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-title">Acknowledgements</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

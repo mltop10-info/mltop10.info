@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>OWASP Machine Learning Security Top 10 (2023 edition) - About OWASP</title>
+<title>OWASP Machine Learning Security Top 10 - Draft release v0.2 - ML05:2023 Model Stealing</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -29,8 +29,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./ML01_2023-Adversarial_Attack.html" rel="next">
-<link href="./notice.html" rel="prev">
+<link href="./ML06_2023-Corrupted_Packages.html" rel="next">
+<link href="./ML04_2023-Membership_Inference_Attack.html" rel="prev">
 <link href="./favicon.png" rel="icon" type="image/png">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -64,10 +64,10 @@ ul.task-list li input[type="checkbox"] {
 <style>html{ scroll-behavior: smooth; }</style>
 
 
-<meta property="og:title" content="OWASP Machine Learning Security Top 10 (2023 edition) - 3&nbsp; About OWASP">
+<meta property="og:title" content="OWASP Machine Learning Security Top 10 - Draft release v0.2 - 8&nbsp; ML05:2023 Model Stealing">
 <meta property="og:description" content="">
-<meta property="og:site-name" content="OWASP Machine Learning Security Top 10 (2023 edition)">
-<meta name="twitter:title" content="OWASP Machine Learning Security Top 10 (2023 edition) - 3&nbsp; About OWASP">
+<meta property="og:site-name" content="OWASP Machine Learning Security Top 10 - Draft release v0.2">
+<meta name="twitter:title" content="OWASP Machine Learning Security Top 10 - Draft release v0.2 - 8&nbsp; ML05:2023 Model Stealing">
 <meta name="twitter:description" content="">
 <meta name="twitter:image" content="https://mltop10.info/cover.png">
 <meta name="twitter:creator" content="@OWASP">
@@ -87,7 +87,7 @@ ul.task-list li input[type="checkbox"] {
     <img src="./favicon.png" alt="" class="navbar-logo">
     </a>
     <a class="navbar-brand" href="./index.html">
-    <span class="navbar-title">OWASP Machine Learning Security Top 10 (2023 edition)</span>
+    <span class="navbar-title">OWASP Machine Learning Security Top 10 (2023 edition) - Draft release v0.2</span>
     </a>
   </div>
         <div class="quarto-navbar-tools ms-auto tools-wide">
@@ -107,7 +107,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./about_owasp.html"><span class="chapter-title">About OWASP</span></a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./ML01_2023-Adversarial_Attack.html">Top 10 2023 List</a></li><li class="breadcrumb-item"><a href="./ML05_2023-Model_Stealing.html"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">ML05:2023 Model Stealing</span></a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -139,7 +139,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./about_owasp.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">About OWASP</span></a>
+  <a href="./about_owasp.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">About OWASP</span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
@@ -173,7 +173,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./ML05_2023-Model_Stealing.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">ML05:2023 Model Stealing</span></a>
+  <a href="./ML05_2023-Model_Stealing.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">ML05:2023 Model Stealing</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -203,30 +203,54 @@ ul.task-list li input[type="checkbox"] {
 </li>
       </ul>
   </li>
-        <li class="sidebar-item">
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
+ <span class="menu-text">Appendices</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./acknowledgements.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Acknowledgements</span></a>
   </div>
 </li>
-        <li class="sidebar-item">
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./glossary.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Glossary</span></a>
   </div>
 </li>
+      </ul>
+  </li>
     </ul>
     </div>
 </nav>
 <div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Page Contents</h2>
+   
+  <ul>
+  <li><a href="#description" id="toc-description" class="nav-link active" data-scroll-target="#description">Description</a></li>
+  <li><a href="#how-to-prevent" id="toc-how-to-prevent" class="nav-link" data-scroll-target="#how-to-prevent">How to Prevent</a></li>
+  <li><a href="#risk-factors" id="toc-risk-factors" class="nav-link" data-scroll-target="#risk-factors">Risk Factors</a></li>
+  <li><a href="#example-attack-scenarios" id="toc-example-attack-scenarios" class="nav-link" data-scroll-target="#example-attack-scenarios">Example Attack Scenarios</a>
+  <ul class="collapse">
+  <li><a href="#scenario1" id="toc-scenario1" class="nav-link" data-scroll-target="#scenario1">Scenario #1: Stealing a machine learning model from a competitor</a></li>
+  </ul></li>
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
+  </ul>
+<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/OWASP/www-project-machine-learning-security-top-10/edit/master/2023/ML05_2023-Model_Stealing.md" class="toc-action">Edit this page</a></p><p><a href="https://github.com/OWASP/www-project-machine-learning-security-top-10/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-title">About OWASP</span></h1>
+<h1 class="title"><span class="chapter-title">ML05:2023 Model Stealing</span></h1>
 </div>
 
 
@@ -241,28 +265,63 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<p>The Open Worldwide Application Security Project (OWASP) is an open community dedicated to enabling organizations to develop, purchase, and maintain applications and APIs that can be trusted.</p>
-<p>At OWASP, you’ll find free and open:</p>
-<ul>
-<li>Application security tools and standards.</li>
-<li>Complete books on application security testing, secure code development, and secure code review.</li>
-<li>Presentations and <a href="https://www.youtube.com/user/OWASPGLOBAL">videos</a>.</li>
-<li><a href="https://cheatsheetseries.owasp.org/">Cheat sheets</a> on many common topics.</li>
-<li>Standard security controls and libraries.</li>
-<li><a href="https://owasp.org/chapters/">Local chapters worldwide</a>.</li>
-<li>Cutting edge research.</li>
-<li>Extensive <a href="https://owasp.org/events/">conferences worldwide</a>.</li>
-<li><a href="https://groups.google.com/a/owasp.org/forum/#!overview">Mailing lists</a> (<a href="https://lists.owasp.org/mailman/listinfo">archive</a>).</li>
-</ul>
-<p>Learn more at: <a href="https://www.owasp.org">https://www.owasp.org</a>.</p>
-<p>All OWASP tools, documents, videos, presentations, and chapters are free and open to anyone interested in improving application security.</p>
-<p>We advocate approaching application security as a people, process, and technology problem, because the most effective approaches to application security require improvements in these areas.</p>
-<p>OWASP is a new kind of organization. Our freedom from commercial pressures allows us to provide unbiased, practical, and cost-effective information about application security.</p>
-<p>OWASP is not affiliated with any technology company, although we support the informed use of commercial security technology. OWASP produces many types of materials in a collaborative, transparent, and open way.</p>
-<p>The OWASP Foundation is the non-profit entity that ensures the project’s long-term success. Almost everyone associated with OWASP is a volunteer, including the OWASP board, chapter leaders, project leaders, and project members. We support innovative security research with grants and infrastructure.</p>
-<p>Come join us!</p>
+<section id="description" class="level2">
+<h2 class="anchored" data-anchor-id="description">Description</h2>
+<p>Model stealing attacks occur when an attacker gains access to the model’s parameters.</p>
+</section>
+<section id="how-to-prevent" class="level2">
+<h2 class="anchored" data-anchor-id="how-to-prevent">How to Prevent</h2>
+<p><strong>Encryption:</strong> Encrypting the model’s code, training data, and other sensitive information can prevent attackers from being able to access and steal the model.</p>
+<p><strong>Access Control:</strong> Implementing strict access control measures, such as two-factor authentication, can prevent unauthorized individuals from accessing and stealing the model.</p>
+<p><strong>Regular backups:</strong> Regularly backing up the model’s code, training data, and other sensitive information can ensure that it can be recovered in the event of a theft.</p>
+<p><strong>Model Obfuscation:</strong> Obfuscating the model’s code and making it difficult to reverse engineer can prevent attackers from being able to steal the model.</p>
+<p><strong>Watermarking:</strong> Adding a watermark to the model’s code and training data can make it possible to trace the source of a theft and hold the attacker accountable.</p>
+<p><strong>Legal protection:</strong> Securing legal protection for the model, such as patents or trade secrets, can make it more difficult for an attacker to steal the model and can provide a basis for legal action in the event of a theft.</p>
+<p><strong>Monitoring and auditing:</strong> Regularly monitoring and auditing the model’s use can help detect and prevent theft by detecting when an attacker is attempting to access or steal the model.</p>
+</section>
+<section id="risk-factors" class="level2">
+<h2 class="anchored" data-anchor-id="risk-factors">Risk Factors</h2>
+<table class="table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 29%">
+<col style="width: 37%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;">Threat Agents/Attack Vectors</th>
+<th style="text-align: center;">Security Weakness</th>
+<th style="text-align: center;">Impact</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">Exploitability: 4 (Moderate) <br><br> <em>ML Application Specific: 4</em> <br> <em>ML Operations Specific: 3</em></td>
+<td style="text-align: center;">Detectability: 3 (Moderate)</td>
+<td style="text-align: center;">Technical: 4 (Moderate)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Threat Agent: This refers to the entity that carries out the attack, in this case, it is an attacker who wants to steal the machine learning model.</td>
+<td style="text-align: center;">Unsecured model deployment: The unsecured deployment of the model makes it easier for the attacker to access and steal the model.</td>
+<td style="text-align: center;">The impact of a model theft could be both on the confidentiality of the data used to train the model and the reputation of the organization that developed the model.</td>
+</tr>
+</tbody>
+</table>
+<p>It is important to note that this chart is only a sample based on <a href="#scenario1">the scenario below</a> only. The actual risk assessment will depend on the specific circumstances of each machine learning system.</p>
+</section>
+<section id="example-attack-scenarios" class="level2">
+<h2 class="anchored" data-anchor-id="example-attack-scenarios">Example Attack Scenarios</h2>
+<section id="scenario1" class="level3">
+<h3 class="anchored" data-anchor-id="scenario1">Scenario #1: Stealing a machine learning model from a competitor</h3>
+<p>A malicious attacker is working for a competitor of a company that has developed a valuable machine learning model. The attacker wants to steal this model so that their company can gain a competitive advantage and start using it for their own purposes.</p>
+<p>The attacker executed this attack by reverse engineering the company’s machine learning model, either by disassembling the binary code or by accessing the model’s training data and algorithm. Once the attacker has reverse engineered the model, they can use this information to recreate the model and start using it for their own purposes. This can result in significant financial loss for the original company, as well as damage to their reputation.</p>
+</section>
+</section>
+<section id="references" class="level2">
+<h2 class="anchored" data-anchor-id="references">References</h2>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -512,15 +571,17 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
 });
 </script>
+<script src="https://giscus.app/client.js" data-repo="OWASP/www-project-machine-learning-security-top-10" data-repo-id="MDEwOlJlcG9zaXRvcnkyMDgxMzgxNTc=" data-category="General" data-category-id="DIC_kwDODGfvrc4CYsJC" data-mapping="title" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="top" data-theme="light" data-lang="en" crossorigin="anonymous" data-loading="lazy" async="">
+</script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./notice.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">Notice</span></span>
+      <a href="./ML04_2023-Membership_Inference_Attack.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">ML04:2023 Membership Inference Attack</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./ML01_2023-Adversarial_Attack.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-title">ML01:2023 Adversarial Attack</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./ML06_2023-Corrupted_Packages.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-title">ML06:2023 Corrupted Packages</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
@@ -528,5 +589,5 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 
 
 
-<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/OWASP/www-project-machine-learning-security-top-10/edit/master/2023/about_owasp.md" class="toc-action">Edit this page</a></p><p><a href="https://github.com/OWASP/www-project-machine-learning-security-top-10/issues/new" class="toc-action">Report an issue</a></p></div></div></div></div></footer><script src="site_libs/quarto-html/zenscroll-min.js"></script>
+<script src="site_libs/quarto-html/zenscroll-min.js"></script>
 </body></html>

@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>OWASP Machine Learning Security Top 10 (2023 edition) - ML04:2023 Membership Inference Attack</title>
+<title>OWASP Machine Learning Security Top 10 - Draft release v0.2 - ML07:2023 Transfer Learning Attack</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -29,8 +29,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./ML05_2023-Model_Stealing.html" rel="next">
-<link href="./ML03_2023-Model_Inversion_Attack.html" rel="prev">
+<link href="./ML08_2023-Model_Skewing.html" rel="next">
+<link href="./ML06_2023-Corrupted_Packages.html" rel="prev">
 <link href="./favicon.png" rel="icon" type="image/png">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -64,10 +64,10 @@ ul.task-list li input[type="checkbox"] {
 <style>html{ scroll-behavior: smooth; }</style>
 
 
-<meta property="og:title" content="OWASP Machine Learning Security Top 10 (2023 edition) - 7&nbsp; ML04:2023 Membership Inference Attack">
+<meta property="og:title" content="OWASP Machine Learning Security Top 10 - Draft release v0.2 - 10&nbsp; ML07:2023 Transfer Learning Attack">
 <meta property="og:description" content="">
-<meta property="og:site-name" content="OWASP Machine Learning Security Top 10 (2023 edition)">
-<meta name="twitter:title" content="OWASP Machine Learning Security Top 10 (2023 edition) - 7&nbsp; ML04:2023 Membership Inference Attack">
+<meta property="og:site-name" content="OWASP Machine Learning Security Top 10 - Draft release v0.2">
+<meta name="twitter:title" content="OWASP Machine Learning Security Top 10 - Draft release v0.2 - 10&nbsp; ML07:2023 Transfer Learning Attack">
 <meta name="twitter:description" content="">
 <meta name="twitter:image" content="https://mltop10.info/cover.png">
 <meta name="twitter:creator" content="@OWASP">
@@ -87,7 +87,7 @@ ul.task-list li input[type="checkbox"] {
     <img src="./favicon.png" alt="" class="navbar-logo">
     </a>
     <a class="navbar-brand" href="./index.html">
-    <span class="navbar-title">OWASP Machine Learning Security Top 10 (2023 edition)</span>
+    <span class="navbar-title">OWASP Machine Learning Security Top 10 (2023 edition) - Draft release v0.2</span>
     </a>
   </div>
         <div class="quarto-navbar-tools ms-auto tools-wide">
@@ -107,7 +107,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./ML01_2023-Adversarial_Attack.html">Top 10 2023 List</a></li><li class="breadcrumb-item"><a href="./ML04_2023-Membership_Inference_Attack.html"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">ML04:2023 Membership Inference Attack</span></a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./ML01_2023-Adversarial_Attack.html">Top 10 2023 List</a></li><li class="breadcrumb-item"><a href="./ML07_2023-Transfer_Learning_Attack.html"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">ML07:2023 Transfer Learning Attack</span></a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -168,7 +168,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./ML04_2023-Membership_Inference_Attack.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">ML04:2023 Membership Inference Attack</span></a>
+  <a href="./ML04_2023-Membership_Inference_Attack.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">ML04:2023 Membership Inference Attack</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -183,7 +183,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./ML07_2023-Transfer_Learning_Attack.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">ML07:2023 Transfer Learning Attack</span></a>
+  <a href="./ML07_2023-Transfer_Learning_Attack.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">ML07:2023 Transfer Learning Attack</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -203,16 +203,27 @@ ul.task-list li input[type="checkbox"] {
 </li>
       </ul>
   </li>
-        <li class="sidebar-item">
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
+ <span class="menu-text">Appendices</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./acknowledgements.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Acknowledgements</span></a>
   </div>
 </li>
-        <li class="sidebar-item">
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./glossary.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Glossary</span></a>
   </div>
 </li>
+      </ul>
+  </li>
     </ul>
     </div>
 </nav>
@@ -228,17 +239,18 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#risk-factors" id="toc-risk-factors" class="nav-link" data-scroll-target="#risk-factors">Risk Factors</a></li>
   <li><a href="#example-attack-scenarios" id="toc-example-attack-scenarios" class="nav-link" data-scroll-target="#example-attack-scenarios">Example Attack Scenarios</a>
   <ul class="collapse">
-  <li><a href="#scenario1" id="toc-scenario1" class="nav-link" data-scroll-target="#scenario1">Scenario #1: Inferencing financial data from a machine learning model</a></li>
+  <li><a href="#scenario1" id="toc-scenario1" class="nav-link" data-scroll-target="#scenario1">Scenario #1: Training a model on a malicious dataset</a></li>
   </ul></li>
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
   </ul>
-<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/OWASP/www-project-machine-learning-security-top-10/edit/master/2023/ML04_2023-Membership_Inference_Attack.md" class="toc-action">Edit this page</a></p><p><a href="https://github.com/OWASP/www-project-machine-learning-security-top-10/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
+<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/OWASP/www-project-machine-learning-security-top-10/edit/master/2023/ML07_2023-Transfer_Learning_Attack.md" class="toc-action">Edit this page</a></p><p><a href="https://github.com/OWASP/www-project-machine-learning-security-top-10/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-title">ML04:2023 Membership Inference Attack</span></h1>
+<h1 class="title"><span class="chapter-title">ML07:2023 Transfer Learning Attack</span></h1>
 </div>
 
 
@@ -255,23 +267,23 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="description" class="level2">
 <h2 class="anchored" data-anchor-id="description">Description</h2>
-<p>Membership inference attacks occur when an attacker manipulates the model’s training data in order to cause it to behave in a way that exposes sensitive information.</p>
+<p>Transfer learning attacks occur when an attacker trains a model on one task and then fine-tunes it on another task to cause it to behave in an undesirable way.</p>
 </section>
 <section id="how-to-prevent" class="level2">
 <h2 class="anchored" data-anchor-id="how-to-prevent">How to Prevent</h2>
-<p><strong>Model training on randomized or shuffled data:</strong> Training machine learning models on randomized or shuffled data can make it more difficult for an attacker to determine whether a particular example was included in the training dataset.</p>
-<p><strong>Model Obfuscation:</strong> Obfuscating the model’s predictions by adding random noise or using differential privacy techniques can help prevent membership inference attacks by making it harder for an attacker to determine the model’s training data.</p>
-<p><strong>Regularisation:</strong> Regularisation techniques such as L1 or L2 regularization can help prevent overfitting of the model to the training data, which can reduce the model’s ability to accurately determine whether a particular example was included in the training dataset.</p>
-<p><strong>Reducing the training data:</strong> Reducing the size of the training dataset or removing redundant or highly correlated features can help reduce the information an attacker can gain from a membership inference attack.</p>
-<p><strong>Testing and monitoring:</strong> Regularly testing and monitoring the model’s behavior for anomalies can help detect and prevent membership inference attacks by detecting when an attacker is attempting to gain access to sensitive information.</p>
+<p><strong>Regularly monitor and update the training datasets:</strong> Regularly monitoring and updating the training datasets can help prevent the transfer of malicious knowledge from the attacker's model to the target model.</p>
+<p><strong>Use secure and trusted training datasets:</strong> Using secure and trusted training datasets can help prevent the transfer of malicious knowledge from the attacker’s model to the target model.</p>
+<p><strong>Implement model isolation:</strong> Implementing model isolation can help prevent the transfer of malicious knowledge from one model to another. For example, separating the training and deployment environments can prevent attackers from transferring knowledge from the training environment to the deployment environment.</p>
+<p><strong>Use differential privacy:</strong> Using differential privacy can help protect the privacy of individual records in the training dataset and prevent the transfer of malicious knowledge from the attacker’s model to the target model.</p>
+<p><strong>Perform regular security audits:</strong> Regular security audits can help identify and prevent transfer learning attacks by identifying and addressing vulnerabilities in the system.</p>
 </section>
 <section id="risk-factors" class="level2">
 <h2 class="anchored" data-anchor-id="risk-factors">Risk Factors</h2>
 <table class="table">
 <colgroup>
-<col style="width: 40%">
-<col style="width: 30%">
-<col style="width: 28%">
+<col style="width: 41%">
+<col style="width: 29%">
+<col style="width: 29%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -282,14 +294,14 @@ ul.task-list li input[type="checkbox"] {
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: center;">Exploitability: 4 (Moderate) <br><br> <em>ML Application Specific: 5</em> <br> <em>ML Operations Specific: 3</em></td>
-<td style="text-align: center;">Detectability: 3 (Moderate)</td>
-<td style="text-align: center;">Technical: 4 (Moderate)</td>
+<td style="text-align: center;">Exploitability: 5 (Easy) <br><br> <em>ML Application Specific: 4</em> <br>The attack specifically targets the machine learning application and can cause significant harm to the model and the organization. <br><br> <em>ML Operations Specific: 3</em> <br> The attack requires knowledge of machine learning operations but can be executed with relative ease.</td>
+<td style="text-align: center;">Detectability: 1 (Difficult) <br><br> <em>The attack may be difficult to detect as the results produced by the compromised model may appear to be correct and consistent with expectations.</em></td>
+<td style="text-align: center;">Technical: 5 (Difficult) <br><br> <em>The attack requires a high level of technical expertise in machine learning and a willingness to compromise the integrity of the training dataset or pre-trained models.</em></td>
 </tr>
 <tr class="even">
-<td style="text-align: center;">Threat Actors: Hackers or malicious actors who have access to the data and the model. <br> Insiders who have malicious intent or are bribed to interfere with the data. <br><br> Attact Vectors: Unsecured data transmission channels that allow unauthorized access to the data.</td>
-<td style="text-align: center;">Lack of proper data access controls. <br><br> Lack of proper data validation and sanitization techniques. <br><br> Lack of proper data encryption. <br><br> Lack of proper data backup and recovery techniques.</td>
-<td style="text-align: center;">Unreliable or incorrect model predictions. <br><br> Loss of confidentiality and privacy of sensitive data. <br><br> Legal and regulatory compliance violations. <br><br> Reputational damage.</td>
+<td style="text-align: center;">Threat Actor: Malicious actor. <br><br> Attack Vector: Attacker with knowledge of machine learning and access to the training dataset or pre-trained models.</td>
+<td style="text-align: center;">Lack of proper data protection measures for the training dataset and pre-trained models. <br><br> Insecure storage and sharing of pre-trained models. <br><br> Lack of proper data protection measures for the pre-trained models and training dataset.</td>
+<td style="text-align: center;">Misleading or incorrect results from the machine learning model. <br><br> Confidentiality breach of sensitive information in the training dataset. <br><br> Reputational harm to the organization. <br><br> Legal or regulatory compliance issues.</td>
 </tr>
 </tbody>
 </table>
@@ -298,13 +310,16 @@ ul.task-list li input[type="checkbox"] {
 <section id="example-attack-scenarios" class="level2">
 <h2 class="anchored" data-anchor-id="example-attack-scenarios">Example Attack Scenarios</h2>
 <section id="scenario1" class="level3">
-<h3 class="anchored" data-anchor-id="scenario1">Scenario #1: Inferencing financial data from a machine learning model</h3>
-<p>A malicious attacker wants to gain access to sensitive financial information of individuals. They do this by training a machine learning model on a dataset of financial records and using it to query whether or not a particular individual’s record was included in the training data. The attacker can then use this information to infer the financial history and sensitive information of individuals.</p>
-<p>The attacker executed this attack by training a machine learning model on a dataset of financial records obtained from a financial organization. They then used this model to query whether or not a particular individual's record was included in the training data, allowing them to infer sensitive financial information.</p>
-<p><strong>References:</strong></p>
-
-
+<h3 class="anchored" data-anchor-id="scenario1">Scenario #1: Training a model on a malicious dataset</h3>
+<p>An attacker trains a machine learning model on a malicious dataset that contains manipulated images of faces. The attacker wants to target a face recognition system used by a security firm for identity verification.</p>
+<p>The attacker then transfers the model’s knowledge to the target face recognition system. The target system starts using the attacker’s manipulated model for identity verification.</p>
+<p>As a result, the face recognition system starts making incorrect predictions, allowing the attacker to bypass the security and gain access to sensitive information. For example, the attacker could use a manipulated image of themselves and the system would identify them as a legitimate user.</p>
 </section>
+</section>
+<section id="references" class="level2">
+<h2 class="anchored" data-anchor-id="references">References</h2>
+
+
 </section>
 
 </main> <!-- /main -->
@@ -559,13 +574,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./ML03_2023-Model_Inversion_Attack.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">ML03:2023 Model Inversion Attack</span></span>
+      <a href="./ML06_2023-Corrupted_Packages.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">ML06:2023 Corrupted Packages</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./ML05_2023-Model_Stealing.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-title">ML05:2023 Model Stealing</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./ML08_2023-Model_Skewing.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-title">ML08:2023 Model Skewing</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
