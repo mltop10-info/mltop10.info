@@ -1,6 +1,6 @@
 project:
   type: book
-  output-dir: rendered-website
+  output-dir: docs
 book:
   title: "OWASP Machine Learning Security Top 10 - Draft release v0.2"
   # subtitle: "Draft release v0.2"
