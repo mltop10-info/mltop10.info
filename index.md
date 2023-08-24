@@ -7,9 +7,9 @@ comments: false
 
 ### Important
 
-The current version of this work is in draft and is being modified frequently.
+_The current version of this work is in draft and is being modified frequently.
 Please refer to the [project wiki](https://github.com/OWASP/www-project-machine-learning-security-top-10/wiki)
-for information on how to contribute and release timelines.
+for information on how to contribute and project release timelines._
 
 :::
 
