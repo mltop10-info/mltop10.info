@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>OWASP Machine Learning Security Top 10 (2023 edition) - ML02:2023 Data Poisoning Attack</title>
+<title>OWASP Machine Learning Security Top 10 - Draft release v0.2 - ML06:2023 Corrupted Packages</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -29,8 +29,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./ML03_2023-Model_Inversion_Attack.html" rel="next">
-<link href="./ML01_2023-Adversarial_Attack.html" rel="prev">
+<link href="./ML07_2023-Transfer_Learning_Attack.html" rel="next">
+<link href="./ML05_2023-Model_Stealing.html" rel="prev">
 <link href="./favicon.png" rel="icon" type="image/png">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -64,10 +64,10 @@ ul.task-list li input[type="checkbox"] {
 <style>html{ scroll-behavior: smooth; }</style>
 
 
-<meta property="og:title" content="OWASP Machine Learning Security Top 10 (2023 edition) - 5&nbsp; ML02:2023 Data Poisoning Attack">
+<meta property="og:title" content="OWASP Machine Learning Security Top 10 - Draft release v0.2 - 9&nbsp; ML06:2023 Corrupted Packages">
 <meta property="og:description" content="">
-<meta property="og:site-name" content="OWASP Machine Learning Security Top 10 (2023 edition)">
-<meta name="twitter:title" content="OWASP Machine Learning Security Top 10 (2023 edition) - 5&nbsp; ML02:2023 Data Poisoning Attack">
+<meta property="og:site-name" content="OWASP Machine Learning Security Top 10 - Draft release v0.2">
+<meta name="twitter:title" content="OWASP Machine Learning Security Top 10 - Draft release v0.2 - 9&nbsp; ML06:2023 Corrupted Packages">
 <meta name="twitter:description" content="">
 <meta name="twitter:image" content="https://mltop10.info/cover.png">
 <meta name="twitter:creator" content="@OWASP">
@@ -87,7 +87,7 @@ ul.task-list li input[type="checkbox"] {
     <img src="./favicon.png" alt="" class="navbar-logo">
     </a>
     <a class="navbar-brand" href="./index.html">
-    <span class="navbar-title">OWASP Machine Learning Security Top 10 (2023 edition)</span>
+    <span class="navbar-title">OWASP Machine Learning Security Top 10 (2023 edition) - Draft release v0.2</span>
     </a>
   </div>
         <div class="quarto-navbar-tools ms-auto tools-wide">
@@ -107,7 +107,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./ML01_2023-Adversarial_Attack.html">Top 10 2023 List</a></li><li class="breadcrumb-item"><a href="./ML02_2023-Data_Poisoning_Attack.html"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">ML02:2023 Data Poisoning Attack</span></a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./ML01_2023-Adversarial_Attack.html">Top 10 2023 List</a></li><li class="breadcrumb-item"><a href="./ML06_2023-Corrupted_Packages.html"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">ML06:2023 Corrupted Packages</span></a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -158,7 +158,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./ML02_2023-Data_Poisoning_Attack.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">ML02:2023 Data Poisoning Attack</span></a>
+  <a href="./ML02_2023-Data_Poisoning_Attack.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">ML02:2023 Data Poisoning Attack</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -178,7 +178,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./ML06_2023-Corrupted_Packages.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">ML06:2023 Corrupted Packages</span></a>
+  <a href="./ML06_2023-Corrupted_Packages.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">ML06:2023 Corrupted Packages</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -203,16 +203,27 @@ ul.task-list li input[type="checkbox"] {
 </li>
       </ul>
   </li>
-        <li class="sidebar-item">
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
+ <span class="menu-text">Appendices</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./acknowledgements.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Acknowledgements</span></a>
   </div>
 </li>
-        <li class="sidebar-item">
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./glossary.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Glossary</span></a>
   </div>
 </li>
+      </ul>
+  </li>
     </ul>
     </div>
 </nav>
@@ -228,19 +239,18 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#risk-factors" id="toc-risk-factors" class="nav-link" data-scroll-target="#risk-factors">Risk Factors</a></li>
   <li><a href="#example-attack-scenarios" id="toc-example-attack-scenarios" class="nav-link" data-scroll-target="#example-attack-scenarios">Example Attack Scenarios</a>
   <ul class="collapse">
-  <li><a href="#scenario1" id="toc-scenario1" class="nav-link" data-scroll-target="#scenario1">Scenario #1: Training a spam classifier</a></li>
-  <li><a href="#scenario-2-training-a-network-traffic-classification-system" id="toc-scenario-2-training-a-network-traffic-classification-system" class="nav-link" data-scroll-target="#scenario-2-training-a-network-traffic-classification-system">Scenario #2: Training a network traffic classification system</a></li>
+  <li><a href="#scenario1" id="toc-scenario1" class="nav-link" data-scroll-target="#scenario1">Scenario #1: Attack on a machine learning project in an organization</a></li>
   </ul></li>
   <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
   </ul>
-<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/OWASP/www-project-machine-learning-security-top-10/edit/master/2023/ML02_2023-Data_Poisoning_Attack.md" class="toc-action">Edit this page</a></p><p><a href="https://github.com/OWASP/www-project-machine-learning-security-top-10/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
+<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/OWASP/www-project-machine-learning-security-top-10/edit/master/2023/ML06_2023-Corrupted_Packages.md" class="toc-action">Edit this page</a></p><p><a href="https://github.com/OWASP/www-project-machine-learning-security-top-10/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-title">ML02:2023 Data Poisoning Attack</span></h1>
+<h1 class="title"><span class="chapter-title">ML06:2023 Corrupted Packages</span></h1>
 </div>
 
 
@@ -257,26 +267,25 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="description" class="level2">
 <h2 class="anchored" data-anchor-id="description">Description</h2>
-<p>Data poisoning attacks occur when an attacker manipulates the training data to cause the model to behave in an undesirable way.</p>
+<p>Corrupted packages attacks occur when an attacker modifies or replaces a machine learning library or model that is used by a system.</p>
 </section>
 <section id="how-to-prevent" class="level2">
 <h2 class="anchored" data-anchor-id="how-to-prevent">How to Prevent</h2>
-<p><strong>Data validation and verification:</strong> Ensure that the training data is thoroughly validated and verified before it is used to train the model. This can be done by implementing data validation checks and employing multiple data labelers to validate the accuracy of the data labeling.</p>
-<p><strong>Secure data storage:</strong> Store the training data in a secure manner, such as using encryption, secure data transfer protocols, and firewalls.</p>
-<p><strong>Data separation:</strong> Separate the training data from the production data to reduce the risk of compromising the training data.</p>
-<p><strong>Access control:</strong> Implement access controls to limit who can access the training data and when they can access it.</p>
-<p><strong>Monitoring and auditing:</strong> Regularly monitor the training data for any anomalies and conduct audits to detect any data tampering.</p>
-<p><strong>Model validation:</strong> Validate the model using a separate validation set that has not been used during training. This can help to detect any data poisoning attacks that may have affected the training data.</p>
-<p><strong>Model ensembles:</strong> Train multiple models using different subsets of the training data and use an ensemble of these models to make predictions. This can reduce the impact of data poisoning attacks as the attacker would need to compromise multiple models to achieve their goals.</p>
-<p><strong>Anomaly detection:</strong> Use anomaly detection techniques to detect any abnormal behavior in the training data, such as sudden changes in the data distribution or data labeling. These techniques can be used to detect data poisoning attacks early on.</p>
+<p><strong>Verify Package Signatures:</strong> Before installing any packages, verify the digital signatures of the packages to ensure that they have not been tampered with.</p>
+<p><strong>Use Secure Package Repositories:</strong> Use secure package repositories, such as Anaconda, that enforce strict security measures and have a vetting process for packages.</p>
+<p><strong>Keep Packages Up-to-date:</strong> Regularly update all packages to ensure that any vulnerabilities are patched.</p>
+<p><strong>Use Virtual Environments:</strong> Use virtual environments to isolate packages and libraries from the rest of the system. This makes it easier to detect any malicious packages and remove them.</p>
+<p><strong>Perform Code Reviews:</strong> Regularly perform code reviews on all packages and libraries used in a project to detect any malicious code.</p>
+<p><strong>Use Package Verification Tools:</strong> Use tools such as PEP 476 and Secure Package Install to verify the authenticity and integrity of packages before installation.</p>
+<p><strong>Educate Developers:</strong> Educate developers on the risks associated with Corrupted Packages Attacks and the importance of verifying packages before installation.</p>
 </section>
 <section id="risk-factors" class="level2">
 <h2 class="anchored" data-anchor-id="risk-factors">Risk Factors</h2>
 <table class="table">
 <colgroup>
-<col style="width: 44%">
-<col style="width: 19%">
-<col style="width: 35%">
+<col style="width: 52%">
+<col style="width: 15%">
+<col style="width: 32%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -287,14 +296,14 @@ ul.task-list li input[type="checkbox"] {
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: center;">Exploitability: 3 (Moderate) <br><br> <em>ML Application Specific: 4</em> <br> <em>ML Operations Specific: 3</em></td>
-<td style="text-align: center;">Detectability: 2 (Difficult)</td>
+<td style="text-align: center;">Exploitability: 5 (Easy) <br><br> <em>ML Application Specific: 5</em> <br> <em>ML Operations Specific: 3</em></td>
+<td style="text-align: center;">Detectability: 5 (Easy)</td>
 <td style="text-align: center;">Technical: 4 (Moderate)</td>
 </tr>
 <tr class="even">
-<td style="text-align: center;">Threat Agent: Attacker who has access to the training data used for the model. <br><br> Attack Vector: The attacker injects malicious data into the training data set.</td>
-<td style="text-align: center;">Lack of data validation and insufficient monitoring of the training data.</td>
-<td style="text-align: center;">The model will make incorrect predictions based on the poisoned data, leading to false decisions and potentially serious consequences.</td>
+<td style="text-align: center;">Threat Actor: Malicious attacker. <br><br> Attack Vector: Modifying code of open-source package used by the machine learning project.</td>
+<td style="text-align: center;">Relying on untrusted third-party code.</td>
+<td style="text-align: center;">Compromise of the machine learning project and potential harm to the organization.</td>
 </tr>
 </tbody>
 </table>
@@ -303,12 +312,10 @@ ul.task-list li input[type="checkbox"] {
 <section id="example-attack-scenarios" class="level2">
 <h2 class="anchored" data-anchor-id="example-attack-scenarios">Example Attack Scenarios</h2>
 <section id="scenario1" class="level3">
-<h3 class="anchored" data-anchor-id="scenario1">Scenario #1: Training a spam classifier</h3>
-<p>An attacker poisons the training data for a deep learning model that classifies emails as spam or not spam. The attacker executed this attack by injecting the maliciously labeled spam emails into the training data set. This could be done by compromising the data storage system, for example by hacking into the network or exploiting a vulnerability in the data storage software. The attacker could also manipulate the data labeling process, such as by falsifying the labeling of the emails or by bribing the data labelers to provide incorrect labels.</p>
-</section>
-<section id="scenario-2-training-a-network-traffic-classification-system" class="level3">
-<h3 class="anchored" data-anchor-id="scenario-2-training-a-network-traffic-classification-system">Scenario #2: Training a network traffic classification system</h3>
-<p>An attacker poisons the training data for a deep learning model that is used to classify network traffic into different categories, such as email, web browsing, and video streaming. They introduce a large number of examples of network traffic that are incorrectly labeled as a different type of traffic, causing the model to be trained to classify this traffic as the incorrect category. As a result, the model may be trained to make incorrect traffic classifications when the model is deployed, potentially leading to misallocation of network resources or degradation of network performance.</p>
+<h3 class="anchored" data-anchor-id="scenario1">Scenario #1: Attack on a machine learning project in an organization</h3>
+<p>A malicious attacker wants to compromise a machine learning project being developed by a large organization. The attacker knows that the project relies on several open-source packages and libraries and wants to find a way to compromise the project.</p>
+<p>The attacker executed the attack by modifying the code of one of the packages that the project relies on, such as NumPy or Scikit-learn. The attacker then uploads this modified version of the package to a public repository, such as PyPI, making it available for others to download and use. When the victim organization downloads and installs the package, the attacker’s malicious code is also installed and can be used to compromise the project.</p>
+<p>This type of attack can be particularly dangerous as it can go unnoticed for a long time, since the victim may not realize that the package they are using has been compromised. The attacker’s malicious code could be used to steal sensitive information, modify results, or even cause the machine learning model to fail.</p>
 </section>
 </section>
 <section id="references" class="level2">
@@ -569,13 +576,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./ML01_2023-Adversarial_Attack.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">ML01:2023 Adversarial Attack</span></span>
+      <a href="./ML05_2023-Model_Stealing.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">ML05:2023 Model Stealing</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./ML03_2023-Model_Inversion_Attack.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-title">ML03:2023 Model Inversion Attack</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./ML07_2023-Transfer_Learning_Attack.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-title">ML07:2023 Transfer Learning Attack</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

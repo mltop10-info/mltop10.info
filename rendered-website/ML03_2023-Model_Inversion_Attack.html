@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>OWASP Machine Learning Security Top 10 (2023 edition) - ML09:2023 Output Integrity Attack</title>
+<title>OWASP Machine Learning Security Top 10 - Draft release v0.2 - ML03:2023 Model Inversion Attack</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -29,8 +29,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./ML10_2023-Neural_Net_Reprogramming.html" rel="next">
-<link href="./ML08_2023-Model_Skewing.html" rel="prev">
+<link href="./ML04_2023-Membership_Inference_Attack.html" rel="next">
+<link href="./ML02_2023-Data_Poisoning_Attack.html" rel="prev">
 <link href="./favicon.png" rel="icon" type="image/png">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -64,10 +64,10 @@ ul.task-list li input[type="checkbox"] {
 <style>html{ scroll-behavior: smooth; }</style>
 
 
-<meta property="og:title" content="OWASP Machine Learning Security Top 10 (2023 edition) - 12&nbsp; ML09:2023 Output Integrity Attack">
+<meta property="og:title" content="OWASP Machine Learning Security Top 10 - Draft release v0.2 - 6&nbsp; ML03:2023 Model Inversion Attack">
 <meta property="og:description" content="">
-<meta property="og:site-name" content="OWASP Machine Learning Security Top 10 (2023 edition)">
-<meta name="twitter:title" content="OWASP Machine Learning Security Top 10 (2023 edition) - 12&nbsp; ML09:2023 Output Integrity Attack">
+<meta property="og:site-name" content="OWASP Machine Learning Security Top 10 - Draft release v0.2">
+<meta name="twitter:title" content="OWASP Machine Learning Security Top 10 - Draft release v0.2 - 6&nbsp; ML03:2023 Model Inversion Attack">
 <meta name="twitter:description" content="">
 <meta name="twitter:image" content="https://mltop10.info/cover.png">
 <meta name="twitter:creator" content="@OWASP">
@@ -87,7 +87,7 @@ ul.task-list li input[type="checkbox"] {
     <img src="./favicon.png" alt="" class="navbar-logo">
     </a>
     <a class="navbar-brand" href="./index.html">
-    <span class="navbar-title">OWASP Machine Learning Security Top 10 (2023 edition)</span>
+    <span class="navbar-title">OWASP Machine Learning Security Top 10 (2023 edition) - Draft release v0.2</span>
     </a>
   </div>
         <div class="quarto-navbar-tools ms-auto tools-wide">
@@ -107,7 +107,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./ML01_2023-Adversarial_Attack.html">Top 10 2023 List</a></li><li class="breadcrumb-item"><a href="./ML09_2023-Output_Integrity_Attack.html"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">ML09:2023 Output Integrity Attack</span></a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./ML01_2023-Adversarial_Attack.html">Top 10 2023 List</a></li><li class="breadcrumb-item"><a href="./ML03_2023-Model_Inversion_Attack.html"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">ML03:2023 Model Inversion Attack</span></a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -163,7 +163,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./ML03_2023-Model_Inversion_Attack.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">ML03:2023 Model Inversion Attack</span></a>
+  <a href="./ML03_2023-Model_Inversion_Attack.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">ML03:2023 Model Inversion Attack</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -193,7 +193,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./ML09_2023-Output_Integrity_Attack.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">ML09:2023 Output Integrity Attack</span></a>
+  <a href="./ML09_2023-Output_Integrity_Attack.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">ML09:2023 Output Integrity Attack</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -203,16 +203,27 @@ ul.task-list li input[type="checkbox"] {
 </li>
       </ul>
   </li>
-        <li class="sidebar-item">
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
+ <span class="menu-text">Appendices</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./acknowledgements.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Acknowledgements</span></a>
   </div>
 </li>
-        <li class="sidebar-item">
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./glossary.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Glossary</span></a>
   </div>
 </li>
+      </ul>
+  </li>
     </ul>
     </div>
 </nav>
@@ -228,18 +239,19 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#risk-factors" id="toc-risk-factors" class="nav-link" data-scroll-target="#risk-factors">Risk Factors</a></li>
   <li><a href="#example-attack-scenarios" id="toc-example-attack-scenarios" class="nav-link" data-scroll-target="#example-attack-scenarios">Example Attack Scenarios</a>
   <ul class="collapse">
-  <li><a href="#scenario1" id="toc-scenario1" class="nav-link" data-scroll-target="#scenario1">Scenario #1: Modification of patient health records</a></li>
+  <li><a href="#scenario1" id="toc-scenario1" class="nav-link" data-scroll-target="#scenario1">Scenario #1: Stealing personal information from a face recognition model</a></li>
+  <li><a href="#scenario-2-bypassing-a-bot-detection-model-in-online-advertising" id="toc-scenario-2-bypassing-a-bot-detection-model-in-online-advertising" class="nav-link" data-scroll-target="#scenario-2-bypassing-a-bot-detection-model-in-online-advertising">Scenario #2: Bypassing a bot detection model in online advertising</a></li>
   </ul></li>
   <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
   </ul>
-<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/OWASP/www-project-machine-learning-security-top-10/edit/master/2023/ML09_2023-Output_Integrity_Attack.md" class="toc-action">Edit this page</a></p><p><a href="https://github.com/OWASP/www-project-machine-learning-security-top-10/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
+<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/OWASP/www-project-machine-learning-security-top-10/edit/master/2023/ML03_2023-Model_Inversion_Attack.md" class="toc-action">Edit this page</a></p><p><a href="https://github.com/OWASP/www-project-machine-learning-security-top-10/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-title">ML09:2023 Output Integrity Attack</span></h1>
+<h1 class="title"><span class="chapter-title">ML03:2023 Model Inversion Attack</span></h1>
 </div>
 
 
@@ -256,24 +268,23 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="description" class="level2">
 <h2 class="anchored" data-anchor-id="description">Description</h2>
-<p>In an Output Integrity Attack scenario, an attacker aims to modify or manipulate the output of a machine learning model in order to change its behavior or cause harm to the system it is used in.</p>
+<p>Model inversion attacks occur when an attacker reverse-engineers the model to extract information from it.</p>
 </section>
 <section id="how-to-prevent" class="level2">
 <h2 class="anchored" data-anchor-id="how-to-prevent">How to Prevent</h2>
-<p><strong>Using cryptographic methods:</strong> Cryptographic methods like digital signatures and secure hashes can be used to verify the authenticity of the results.</p>
-<p><strong>Secure communication channels:</strong> Communication channels between the model and the interface responsible for displaying the results should be secured using secure protocols such as SSL/TLS.</p>
-<p><strong>Input Validation:</strong> Input validation should be performed on the results to check for unexpected or manipulated values.</p>
-<p><strong>Tamper-evident logs:</strong> Maintaining tamper-evident logs of all input and output interactions can help detect and respond to any output integrity attacks.</p>
-<p><strong>Regular software updates:</strong> Regular software updates to fix vulnerabilities and security patches can help reduce the risk of output integrity attacks.</p>
-<p><strong>Monitoring and auditing:</strong> Regular monitoring and auditing of the results and the interactions between the model and the interface can help detect any suspicious activities and respond accordingly.</p>
+<p><strong>Access control:</strong> Limiting access to the model or its predictions can prevent attackers from obtaining the information needed to invert the model. This can be done by requiring authentication, encryption, or other forms of security when accessing the model or its predictions.</p>
+<p><strong>Input validation:</strong> Validating the inputs to the model can prevent attackers from providing malicious data that can be used to invert the model. This can be done by checking the format, range, and consistency of the inputs before they are processed by the model.</p>
+<p><strong>Model transparency:</strong> Making the model and its predictions transparent can help to detect and prevent model inversion attacks. This can be done by logging all inputs and outputs, providing explanations for the model’s predictions, or allowing users to inspect the model’s internal representations.</p>
+<p><strong>Regular monitoring:</strong> Monitoring the model’s predictions for anomalies can help to detect and prevent model inversion attacks. This can be done by tracking the distribution of inputs and outputs, comparing the model’s predictions to ground truth data, or monitoring the model’s performance over time.</p>
+<p><strong>Model retraining:</strong> Regularly retraining the model can help to prevent the information leaked by model inversion attacks from becoming outdated. This can be done by incorporating new data and correcting any inaccuracies in the model’s predictions.</p>
 </section>
 <section id="risk-factors" class="level2">
 <h2 class="anchored" data-anchor-id="risk-factors">Risk Factors</h2>
 <table class="table">
 <colgroup>
-<col style="width: 27%">
-<col style="width: 35%">
-<col style="width: 36%">
+<col style="width: 53%">
+<col style="width: 25%">
+<col style="width: 21%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -284,14 +295,14 @@ ul.task-list li input[type="checkbox"] {
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: center;">Exploitability: 5 (Easy) <br><br> <em>ML Application Specific: 4</em> <br> <em>ML Operations Specific: 4</em></td>
-<td style="text-align: center;">Detectability: 3 (Moderate)</td>
-<td style="text-align: center;">Technical: 3 (Moderate)</td>
+<td style="text-align: center;">Exploitability: 4 (Moderate) <br><br> <em>ML Application Specific: 5</em> <br> <em>ML Operations Specific: 3</em></td>
+<td style="text-align: center;">Detectability: 2 (Difficult)</td>
+<td style="text-align: center;">Technical: 4 (Moderate)</td>
 </tr>
 <tr class="even">
-<td style="text-align: center;">Threat Actors: Malicious attackers or insiders who have access to the model’s inputs and outputs. <br> Third-party entities who have access to the inputs and outputs and may tamper with them to achieve a certain outcome.</td>
-<td style="text-align: center;">Lack of proper authentication and authorization measures to ensure the integrity of the inputs and outputs. <br><br> Inadequate validation and verification of inputs and outputs to prevent tampering. <br><br> Insufficient monitoring and logging of inputs and outputs to detect tampering.</td>
-<td style="text-align: center;">Loss of confidence in the model’s predictions and results. <br><br> Financial loss or damage to reputation if the model’s predictions are used to make important decisions. <br><br> Security risks if the model is used in a critical application such as financial fraud detection or cybersecurity.</td>
+<td style="text-align: center;">Threat Agents: Attackers who have access to the model and input data. <br><br> Attack Vectors: Submitting an image to the model and analyzing the model’s response.</td>
+<td style="text-align: center;">Model’s output can be used to infer sensitive information about the input data.</td>
+<td style="text-align: center;">Confidential information about the input data can be compromised.</td>
 </tr>
 </tbody>
 </table>
@@ -300,8 +311,14 @@ ul.task-list li input[type="checkbox"] {
 <section id="example-attack-scenarios" class="level2">
 <h2 class="anchored" data-anchor-id="example-attack-scenarios">Example Attack Scenarios</h2>
 <section id="scenario1" class="level3">
-<h3 class="anchored" data-anchor-id="scenario1">Scenario #1: Modification of patient health records</h3>
-<p>An attacker has gained access to the output of a machine learning model that is being used to diagnose diseases in a hospital. The attacker modifies the output of the model, making it provide incorrect diagnoses for patients. As a result, patients are given incorrect treatments, leading to further harm and potentially even death.</p>
+<h3 class="anchored" data-anchor-id="scenario1">Scenario #1: Stealing personal information from a face recognition model</h3>
+<p>An attacker trains a deep learning model to perform face recognition. They then use this model to perform a model inversion attack on a different face recognition model that is used by a company or organization. The attacker inputs images of individuals into the model and recovers the personal information of the individuals from the model's predictions, such as their name, address, or social security number.</p>
+<p>The attacker executed this attack by training the model to perform face recognition and then using this model to invert the predictions of another face recognition model. This could be done by exploiting a vulnerability in the model's implementation or by accessing the model through an API. The attacker would then be able to recover the personal information of the individuals from the model's predictions.</p>
+</section>
+<section id="scenario-2-bypassing-a-bot-detection-model-in-online-advertising" class="level3">
+<h3 class="anchored" data-anchor-id="scenario-2-bypassing-a-bot-detection-model-in-online-advertising">Scenario #2: Bypassing a bot detection model in online advertising</h3>
+<p>An advertiser wants to automate their advertising campaigns by using bots to perform actions such as clicking on ads and visiting websites. However, online advertising platforms use bot detection models to prevent bots from performing these actions. To bypass these models, the advertiser trains a deep learning model for bot detection and uses it to invert the predictions of the bot detection model used by the online advertising platform. The advertiser inputs their bots into the model and is able to make the bots appear as human users, allowing them to bypass the bot detection and successfully execute their automated advertising campaigns.</p>
+<p>The advertiser executed this attack by training their own bot detection model and then using it to reverse the predictions of the bot detection model used by the online advertising platform. They were able to access this other model through a vulnerability in its implementation or by using an API. The end result of the attack was the advertiser successfully automating their advertising campaigns by making their bots appear as human users.</p>
 </section>
 </section>
 <section id="references" class="level2">
@@ -562,13 +579,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./ML08_2023-Model_Skewing.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">ML08:2023 Model Skewing</span></span>
+      <a href="./ML02_2023-Data_Poisoning_Attack.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">ML02:2023 Data Poisoning Attack</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./ML10_2023-Neural_Net_Reprogramming.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-title">ML10:2023 Neural Net Reprogramming</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./ML04_2023-Membership_Inference_Attack.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-title">ML04:2023 Membership Inference Attack</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
