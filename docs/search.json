@@ -357,37 +357,37 @@
     "text": "References"
   },
   {
-    "objectID": "ML10_2023-Neural_Net_Reprogramming.html#description",
-    "href": "ML10_2023-Neural_Net_Reprogramming.html#description",
-    "title": "ML10:2023 Neural Net Reprogramming",
+    "objectID": "ML10_2023-Model_Poisoning.html#description",
+    "href": "ML10_2023-Model_Poisoning.html#description",
+    "title": "ML10:2023 Model Poisoning",
     "section": "Description",
-    "text": "Description\nNeural net reprogramming attacks occur when an attacker manipulates the model's parameters to cause it to behave in an undesirable way."
+    "text": "Description\nModel poisoning attacks occur when an attacker manipulates the model's parameters to cause it to behave in an undesirable way."
   },
   {
-    "objectID": "ML10_2023-Neural_Net_Reprogramming.html#how-to-prevent",
-    "href": "ML10_2023-Neural_Net_Reprogramming.html#how-to-prevent",
-    "title": "ML10:2023 Neural Net Reprogramming",
+    "objectID": "ML10_2023-Model_Poisoning.html#how-to-prevent",
+    "href": "ML10_2023-Model_Poisoning.html#how-to-prevent",
+    "title": "ML10:2023 Model Poisoning",
     "section": "How to Prevent",
-    "text": "How to Prevent\nRegularisation: Adding regularisation techniques like L1 or L2 regularization to the loss function helps to prevent overfitting and reduce the chance of neural net reprogramming attacks.\nRobust Model Design: Designing models with robust architectures and activation functions can help reduce the chances of successful reprogramming attacks.\nCryptographic Techniques: Cryptographic techniques can be used to secure the parameters and weights of the model, and prevent unauthorized access or manipulation of these parameters."
+    "text": "How to Prevent\nRegularisation: Adding regularisation techniques like L1 or L2 regularization to the loss function helps to prevent overfitting and reduce the chance of model poisoning attacks.\nRobust Model Design: Designing models with robust architectures and activation functions can help reduce the chances of successful model poisoning attacks.\nCryptographic Techniques: Cryptographic techniques can be used to secure the parameters and weights of the model, and prevent unauthorized access or manipulation of these parameters."
   },
   {
-    "objectID": "ML10_2023-Neural_Net_Reprogramming.html#risk-factors",
-    "href": "ML10_2023-Neural_Net_Reprogramming.html#risk-factors",
-    "title": "ML10:2023 Neural Net Reprogramming",
+    "objectID": "ML10_2023-Model_Poisoning.html#risk-factors",
+    "href": "ML10_2023-Model_Poisoning.html#risk-factors",
+    "title": "ML10:2023 Model Poisoning",
     "section": "Risk Factors",
     "text": "Risk Factors\n\n\n\n\n\n\n\n\nThreat Agents/Attack Vectors\nSecurity Weakness\nImpact\n\n\n\n\nExploitability: 5 (Easy)  ML Application Specific: 4  ML Operations Specific: 4\nDetectability: 3 (Moderate)\nTechnical: 3 (Moderate)\n\n\nThreat Actor: Malicious individuals or organizations with knowledge and resources to manipulate deep learning models.  Malicious insiders within the organization developing the deep learning model.\nInsufficient access controls to the model’s code and parameters.  Lack of proper secure coding practices.  Inadequate monitoring and logging of model’s activity.\nModel’s predictions can be manipulated to achieve desired results. Confidential information within the model can be extracted.  Decisions based on the model’s predictions can be impacted negatively.  Reputation and credibility of the organization can be affected.\n\n\n\nIt is important to note that this chart is only a sample based on the scenario below only. The actual risk assessment will depend on the specific circumstances of each machine learning system."
   },
   {
-    "objectID": "ML10_2023-Neural_Net_Reprogramming.html#example-attack-scenarios",
-    "href": "ML10_2023-Neural_Net_Reprogramming.html#example-attack-scenarios",
-    "title": "ML10:2023 Neural Net Reprogramming",
+    "objectID": "ML10_2023-Model_Poisoning.html#example-attack-scenarios",
+    "href": "ML10_2023-Model_Poisoning.html#example-attack-scenarios",
+    "title": "ML10:2023 Model Poisoning",
     "section": "Example Attack Scenarios",
-    "text": "Example Attack Scenarios\n\nScenario #1: Financial gain through neural net reprogramming\nConsider a scenario where a bank is using a machine learning model to identify handwritten characters on cheques to automate their clearing process. The model has been trained on a large dataset of handwritten characters, and it has been designed to accurately identify the characters based on specific parameters such as size, shape, slant, and spacing.\nAn attacker who wants to exploit the Neural Net Reprogramming attack may manipulate the parameters of the model by altering the images in the training dataset or directly modifying the parameters in the model. This can result in the model being reprogrammed to identify characters differently. For example, the attacker could change the parameters so that the model identifies the character “5” as the character “2”, leading to incorrect amounts being processed.\nThe attacker can exploit this vulnerability by introducing forged cheques into the clearing process, which the model will process as valid due to the manipulated parameters. This can result in significant financial loss to the bank."
+    "text": "Example Attack Scenarios\n\nScenario #1: Financial gain through model poisoning\nConsider a scenario where a bank is using a machine learning model to identify handwritten characters on cheques to automate their clearing process. The model has been trained on a large dataset of handwritten characters, and it has been designed to accurately identify the characters based on specific parameters such as size, shape, slant, and spacing.\nAn attacker who wants to poison a machine learning model may manipulate the parameters of the model by altering the images in the training dataset or directly modifying the parameters in the model. This can result in the model being reprogrammed to identify characters differently. For example, the attacker could change the parameters so that the model identifies the character “5” as the character “2”, leading to incorrect amounts being processed.\nThe attacker can exploit this vulnerability by introducing forged cheques into the clearing process, which the model will process as valid due to the manipulated parameters. This can result in significant financial loss to the bank."
   },
   {
-    "objectID": "ML10_2023-Neural_Net_Reprogramming.html#references",
-    "href": "ML10_2023-Neural_Net_Reprogramming.html#references",
-    "title": "ML10:2023 Neural Net Reprogramming",
+    "objectID": "ML10_2023-Model_Poisoning.html#references",
+    "href": "ML10_2023-Model_Poisoning.html#references",
+    "title": "ML10:2023 Model Poisoning",
     "section": "References",
     "text": "References"
   },

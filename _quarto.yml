@@ -2,7 +2,7 @@ project:
   type: book
   output-dir: docs
 book:
-  title: "OWASP Machine Learning Security Top 10 - Draft release v0.2"
+  title: OWASP Machine Learning Security Top 10 - Draft release v0.2
   # subtitle: "Draft release v0.2"
   output-file: OWASP Machine Learning Security Top 10
   site-url: https://mltop10.info
@@ -18,7 +18,7 @@ book:
   reader-mode: true
   open-graph: true
   twitter-card:
-    creator: "@OWASP"
+    creator: '@OWASP'
     image: cover.png
   navbar:
     title: OWASP Machine Learning Security Top 10 (2023 edition) - Draft release v0.2
@@ -39,10 +39,8 @@ book:
         - ML07_2023-Transfer_Learning_Attack.md
         - ML08_2023-Model_Skewing.md
         - ML09_2023-Output_Integrity_Attack.md
-        - ML10_2023-Neural_Net_Reprogramming.md
-  appendices:
-    - acknowledgements.md
-    - glossary.md
+        - ML10_2023-Model_Poisoning.md
+  appendices: [acknowledgements.md, glossary.md]
 format:
   html:
     theme:
