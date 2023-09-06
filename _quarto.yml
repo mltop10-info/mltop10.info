@@ -1,3 +1,4 @@
+---
 project:
   type: book
   output-dir: docs
@@ -30,7 +31,7 @@ book:
     - about_owasp.md
     - part: Top 10 2023 List
       chapters:
-        - ML01_2023-Adversarial_Attack.md
+        - ML01_2023-Input_Manipulation_Attack.md
         - ML02_2023-Data_Poisoning_Attack.md
         - ML03_2023-Model_Inversion_Attack.md
         - ML04_2023-Membership_Inference_Attack.md
