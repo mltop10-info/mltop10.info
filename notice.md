@@ -15,7 +15,7 @@ This document is currently at v0.2 draft release.
 
 ## Copyright and License
 
-![](license.png){fig-align="left" fig.cap=""}
+![](creativecommons.png){fig-align="left" fig.cap=""}
 
 Copyright © 2003-2023 The OWASP Foundation. This document is released under the
 [Creative Commons Attribution Share-Alike 4.0
