@@ -36,7 +36,7 @@ book:
         - ML03_2023-Model_Inversion_Attack.md
         - ML04_2023-Membership_Inference_Attack.md
         - ML05_2023-Model_Stealing.md
-        - ML06_2023-Corrupted_Packages.md
+        - ML06_2023-AI_Supply_Chain_Attacks.md
         - ML07_2023-Transfer_Learning_Attack.md
         - ML08_2023-Model_Skewing.md
         - ML09_2023-Output_Integrity_Attack.md
