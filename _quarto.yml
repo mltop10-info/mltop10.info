@@ -1,10 +1,9 @@
----
 project:
   type: book
   output-dir: docs
 book:
-  title: OWASP Machine Learning Security Top 10 - Draft release v0.2
-  # subtitle: "Draft release v0.2"
+  title: OWASP Machine Learning Security Top 10 - Draft release v0.3
+  # subtitle: "Draft release v0.3"
   output-file: OWASP Machine Learning Security Top 10
   site-url: https://mltop10.info
   favicon: favicon.png
@@ -22,7 +21,7 @@ book:
     creator: '@OWASP'
     image: cover.png
   navbar:
-    title: OWASP Machine Learning Security Top 10 (2023 edition) - Draft release v0.2
+    title: OWASP Machine Learning Security Top 10 (2023 edition) - Draft release v0.3
     logo: favicon.png
     pinned: true
   chapters:
