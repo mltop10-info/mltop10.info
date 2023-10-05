@@ -5,12 +5,11 @@ comments: false
 
 ## Release
 
-This document is currently at v0.3
+This document is currently at v0.3 draft release.
 
 - [Release Notes](https://github.com/OWASP/www-project-machine-learning-security-top-10/releases)
 
-- [Changelog](https://github.com/OWASP/www-project-machine-learning-security-top-10/commits/v0.2)draft
-  release.
+- [Changelog](https://github.com/OWASP/www-project-machine-learning-security-top-10/commits/v0.3)
 
 ## Lead Authors
 
