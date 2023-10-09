@@ -14,7 +14,7 @@ book:
   repo-branch: master
   # issue-url: "https://github.com/OWASP/www-project-machine-learning-security-top-10/issues/new?assignees=shsingh&labels=issues/general,issues/triage&projects=&template=feedback-report.yaml&title=[FEEDBACK]:+Website"
   repo-actions: [edit, issue]
-  downloads: [pdf]
+  downloads: [pdf, epub]
   reader-mode: true
   open-graph: true
   twitter-card:
