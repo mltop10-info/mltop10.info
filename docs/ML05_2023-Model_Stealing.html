@@ -92,7 +92,23 @@ ul.task-list li input[type="checkbox"] {
   </div>
         <div class="quarto-navbar-tools ms-auto tools-wide">
     <a href="https://github.com/OWASP/www-project-machine-learning-security-top-10/tree/master/docs/" rel="" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
-    <a href="./OWASP-Machine-Learning-Security-Top-10.pdf" rel="" title="Download PDF" class="quarto-navigation-tool px-1" aria-label="Download PDF"><i class="bi bi-file-pdf"></i></a>
+    <div class="dropdown">
+      <a href="" title="Download" id="quarto-navigation-tool-dropdown-0" class="quarto-navigation-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download"><i class="bi bi-download"></i></a>
+      <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="quarto-navigation-tool-dropdown-0">
+          <li>
+            <a class="dropdown-item quarto-navbar-tools ms-auto-item" href="./OWASP-Machine-Learning-Security-Top-10.pdf">
+              <i class="bi bi-bi-file-pdf pe-1"></i>
+            Download PDF
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item quarto-navbar-tools ms-auto-item" href="./OWASP-Machine-Learning-Security-Top-10.epub">
+              <i class="bi bi-bi-journal pe-1"></i>
+            Download ePub
+            </a>
+          </li>
+      </ul>
+    </div>
   <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Toggle reader mode">
   <div class="quarto-reader-toggle-btn">
   <i class="bi"></i>
@@ -239,7 +255,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#risk-factors" id="toc-risk-factors" class="nav-link" data-scroll-target="#risk-factors">Risk Factors</a></li>
   <li><a href="#example-attack-scenarios" id="toc-example-attack-scenarios" class="nav-link" data-scroll-target="#example-attack-scenarios">Example Attack Scenarios</a>
   <ul class="collapse">
-  <li><a href="#scenario1" id="toc-scenario1" class="nav-link" data-scroll-target="#scenario1">Scenario #1: Stealing a machine learning model from a competitor</a></li>
+  <li><a href="#ml05_scenario1" id="toc-ml05_scenario1" class="nav-link" data-scroll-target="#ml05_scenario1">Scenario #1: Stealing a machine learning model from a competitor</a></li>
   </ul></li>
   <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
   </ul>
@@ -281,7 +297,9 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="risk-factors" class="level2">
 <h2 class="anchored" data-anchor-id="risk-factors">Risk Factors</h2>
-<table class="table">
+<div class="table-responsive">
+<table class="table-striped table-hover table-bordered table">
+<caption></caption>
 <colgroup>
 <col style="width: 33%">
 <col style="width: 29%">
@@ -289,30 +307,31 @@ ul.task-list li input[type="checkbox"] {
 </colgroup>
 <thead>
 <tr class="header">
-<th style="text-align: center;">Threat Agents/Attack Vectors</th>
-<th style="text-align: center;">Security Weakness</th>
-<th style="text-align: center;">Impact</th>
+<th style="text-align: left;">Threat Agents/Attack Vectors</th>
+<th style="text-align: left;">Security Weakness</th>
+<th style="text-align: left;">Impact</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: center;">Exploitability: 4 (Moderate) <br><br> <em>ML Application Specific: 4</em> <br> <em>ML Operations Specific: 3</em></td>
-<td style="text-align: center;">Detectability: 3 (Moderate)</td>
-<td style="text-align: center;">Technical: 4 (Moderate)</td>
+<td style="text-align: left;">Exploitability: 4 (Moderate) <br><br> <em>ML Application Specific: 4</em> <br> <em>ML Operations Specific: 3</em></td>
+<td style="text-align: left;">Detectability: 3 (Moderate)</td>
+<td style="text-align: left;">Technical: 4 (Moderate)</td>
 </tr>
 <tr class="even">
-<td style="text-align: center;">Threat Agent: This refers to the entity that carries out the attack, in this case, it is an attacker who wants to steal the machine learning model.</td>
-<td style="text-align: center;">Unsecured model deployment: The unsecured deployment of the model makes it easier for the attacker to access and steal the model.</td>
-<td style="text-align: center;">The impact of a model theft could be both on the confidentiality of the data used to train the model and the reputation of the organization that developed the model.</td>
+<td style="text-align: left;">Threat Agent: This refers to the entity that carries out the attack, in this case, it is an attacker who wants to steal the machine learning model.</td>
+<td style="text-align: left;">Unsecured model deployment: The unsecured deployment of the model makes it easier for the attacker to access and steal the model.</td>
+<td style="text-align: left;">The impact of a model theft could be both on the confidentiality of the data used to train the model and the reputation of the organization that developed the model.</td>
 </tr>
 </tbody>
 </table>
-<p>It is important to note that this chart is only a sample based on <a href="#scenario1">the scenario below</a> only. The actual risk assessment will depend on the specific circumstances of each machine learning system.</p>
+</div>
+<p>It is important to note that this chart is only a sample based on <a href="#ml05_scenario1">the scenario below</a> only. The actual risk assessment will depend on the specific circumstances of each machine learning system.</p>
 </section>
 <section id="example-attack-scenarios" class="level2">
 <h2 class="anchored" data-anchor-id="example-attack-scenarios">Example Attack Scenarios</h2>
-<section id="scenario1" class="level3">
-<h3 class="anchored" data-anchor-id="scenario1">Scenario #1: Stealing a machine learning model from a competitor</h3>
+<section id="ml05_scenario1" class="level3">
+<h3 class="anchored" data-anchor-id="ml05_scenario1">Scenario #1: Stealing a machine learning model from a competitor</h3>
 <p>A malicious attacker is working for a competitor of a company that has developed a valuable machine learning model. The attacker wants to steal this model so that their company can gain a competitive advantage and start using it for their own purposes.</p>
 <p>The attacker executed this attack by reverse engineering the company’s machine learning model, either by disassembling the binary code or by accessing the model’s training data and algorithm. Once the attacker has reverse engineered the model, they can use this information to recreate the model and start using it for their own purposes. This can result in significant financial loss for the original company, as well as damage to their reputation.</p>
 </section>
