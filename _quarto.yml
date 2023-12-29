@@ -18,7 +18,7 @@ book:
   reader-mode: true
   open-graph: true
   twitter-card:
-    creator: '@OWASP'
+    creator: "@OWASP"
     image: cover.png
   navbar:
     title: OWASP Machine Learning Security Top 10 (2023 edition) - Draft release v0.3
@@ -34,7 +34,7 @@ book:
         - ML02_2023-Data_Poisoning_Attack.md
         - ML03_2023-Model_Inversion_Attack.md
         - ML04_2023-Membership_Inference_Attack.md
-        - ML05_2023-Model_Stealing.md
+        - ML05_2023-Model_Theft.md
         - ML06_2023-AI_Supply_Chain_Attacks.md
         - ML07_2023-Transfer_Learning_Attack.md
         - ML08_2023-Model_Skewing.md
