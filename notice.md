@@ -11,11 +11,11 @@ This document is currently at v0.3 draft release.
 
 - [Changelog](https://github.com/OWASP/www-project-machine-learning-security-top-10/commits/v0.3)
 
-## Lead Authors
+## Project Leaders
 
 - [Shain Singh](mailto:shain.singh@owasp.org)
 - [Sagar Bhure](mailto:sagar.bhure@owasp.org)
-- [Rob van der Veer](mailto:rob.vanderveer@owasp.org)
+- [Ben Kereopa-Yorke](mailto:ben.ky@owasp.org)
 
 ## Copyright and License
 
